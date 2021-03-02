@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Zilla+Slab:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header[role=banner] {
+  font-family: "Zilla Slab", serif;
+  color: #FDFDFE;
+  margin-bottom: 20em;
+}
+
+div.page-wrapper {
+  background: black;
+  background: linear-gradient(180deg, black 0%, #091179 20%, white 100%);
+  position: relative;
+}
+
+div.design-selection {
+  color: #FDFDFE;
+  position: absolute;
+  top: 10em;
+}
+div.design-selection ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+div.design-selection ul li {
+  list-style: none;
+}
+div.design-selection ul li a {
+  text-decoration: none;
+  color: #FDFDFE;
+}
+
+.intro {
+  color: #FDFDFE;
+}
+
+.preamble::before {
+  content: url("images/wall-e.png");
+}
+
+.explanation::before {
+  content: url("images/house.svg");
+}
+
+.participation::before {
+  content: url("images/airplane.png");
+}
+
+.benefits {
+  background-color: #FEE300;
+}
+
+.benefits::before {
+  content: url("images/rat.png");
+}
+
+.requirements {
+  margin-bottom: 30em;
+}
+
+.requirements::before {
+  content: url("images/ant.png");
+}
+
+div.zen-resources ul {
+  background-color: pink;
+  position: absolute;
+  bottom: 10em;
+  color: white;
+  width: 100%;
+}
+div.zen-resources ul li {
+  padding: 2em 1em;
+  background-color: #047542;
+  border: 1px solid #0D0D0D;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+footer a {
+  text-decoration: none;
+}
+
+div.design-archives nav[role=navigation] {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+div.design-archives nav[role=navigation] li {
+  list-style: none;
+}
+div.design-archives nav[role=navigation] li a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .preamble {
+    width: 50%;
+    text-align: end;
+    margin-right: 10%;
+    margin-left: auto;
+  }
+  .preamble::before {
+    content: url("images/wall-e.png");
+  }
+
+  .explanation {
+    width: 50%;
+    margin-left: 10%;
+  }
+  .explanation::before {
+    content: url("images/house.svg");
+    margin-left: 110%;
+  }
+
+  .participation {
+    width: 50%;
+    text-align: end;
+    margin-right: 10%;
+    margin-left: auto;
+  }
+  .participation::before {
+    content: url("images/airplane.png");
+  }
+
+  .benefits {
+    background-color: #FEE300;
+    width: 50%;
+    margin-left: 10%;
+  }
+  .benefits::before {
+    content: url("images/rat.png");
+    margin-left: 110%;
+  }
+
+  .requirements {
+    width: 50%;
+    text-align: end;
+    margin-right: 10%;
+    margin-left: auto;
+  }
+  .requirements::before {
+    content: url("images/ant.png");
+  }
+
+  div.zen-resources ul {
+    background-color: pink;
+    position: absolute;
+    display: flex;
+    color: white;
+    width: 100%;
+  }
+  div.zen-resources ul li {
+    padding: 2em 1em;
+    background-color: #047542;
+    border: 1px solid #0D0D0D;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
