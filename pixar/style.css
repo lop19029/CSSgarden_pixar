@@ -9,12 +9,17 @@ header[role=banner] {
   font-family: "Zilla Slab", serif;
   color: #FDFDFE;
   margin-bottom: 20em;
+  text-align: center;
+}
+
+#css-zen-garden {
+  background: black;
+  background: linear-gradient(180deg, black 0%, #091179 20%, white 100%);
 }
 
 div.page-wrapper {
-  background: black;
-  background: linear-gradient(180deg, black 0%, #091179 20%, white 100%);
   position: relative;
+  margin: 20px;
 }
 
 div.design-selection {
@@ -30,6 +35,9 @@ div.design-selection ul {
 }
 div.design-selection ul li {
   list-style: none;
+  background-image: url("images/planet-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 10px;
 }
 div.design-selection ul li a {
   text-decoration: none;
@@ -106,7 +114,7 @@ div.design-archives nav[role=navigation] li a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media (min-width: 37.5em) {
   .preamble {
     width: 50%;
     text-align: end;
@@ -116,7 +124,9 @@ div.design-archives nav[role=navigation] li a {
   .preamble::before {
     content: url("images/wall-e.png");
   }
+}
 
+@media (min-width: 37.5em) {
   .explanation {
     width: 50%;
     margin-left: 10%;
@@ -125,7 +135,9 @@ div.design-archives nav[role=navigation] li a {
     content: url("images/house.svg");
     margin-left: 110%;
   }
+}
 
+@media (min-width: 37.5em) {
   .participation {
     width: 50%;
     text-align: end;
@@ -135,7 +147,9 @@ div.design-archives nav[role=navigation] li a {
   .participation::before {
     content: url("images/airplane.png");
   }
+}
 
+@media (min-width: 37.5em) {
   .benefits {
     background-color: #FEE300;
     width: 50%;
@@ -145,7 +159,9 @@ div.design-archives nav[role=navigation] li a {
     content: url("images/rat.png");
     margin-left: 110%;
   }
+}
 
+@media (min-width: 37.5em) {
   .requirements {
     width: 50%;
     text-align: end;
@@ -155,7 +171,9 @@ div.design-archives nav[role=navigation] li a {
   .requirements::before {
     content: url("images/ant.png");
   }
+}
 
+@media (min-width: 37.5em) {
   div.zen-resources ul {
     background-color: pink;
     position: absolute;

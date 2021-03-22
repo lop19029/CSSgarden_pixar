@@ -46,13 +46,20 @@ header[role=banner] {
     font-family: $header-font;
     color: $secondary-color;
     margin-bottom: 20em;
+    text-align: center;
 }
 
-div.page-wrapper {
+#css-zen-garden {
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 17, 121, 1) 20%, rgba(255, 255, 255, 1) 100%);
-    position: relative;
 }
+
+div.page-wrapper {    
+    position: relative;
+    margin: 20px;
+}
+
+
 
 div.design-selection {
     color: $secondary-color;
@@ -67,6 +74,9 @@ div.design-selection {
 
         li {
             list-style: none;
+            background-image: url('images/planet-svgrepo-com.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 10px;
         }
 
         li a {
@@ -148,68 +158,83 @@ div.design-archives nav[role=navigation] {
 
     li a {
         text-decoration: none;
-        
+
     }
 }
 
-@media only screen and (min-width: 600px) {
-    .preamble {
+.preamble {
+    @include large {
         width: 50%;
         text-align: end;
         margin-right: 10%;
         margin-left: auto;
+
         &::before {
             content: url('images/wall-e.png');
         }
     }
-    
-    .explanation {
+}
+
+.explanation {
+    @include large {
         width: 50%;
         margin-left: 10%;
+
         &::before {
             content: url('images/house.svg');
             margin-left: 110%;
         }
     }
-    
-    .participation{
+}
+
+.participation {
+    @include large {
         width: 50%;
         text-align: end;
         margin-right: 10%;
         margin-left: auto;
+
         &::before {
             content: url('images/airplane.png');
         }
     }
-    
-    .benefits {
+}
+
+.benefits {
+    @include large {
         background-color: #FEE300;
         width: 50%;
         margin-left: 10%;
+
         &::before {
             content: url('images/rat.png');
             margin-left: 110%;
         }
     }
-    
-    
-    .requirements {
+}
+
+
+.requirements {
+    @include large {
         width: 50%;
         text-align: end;
         margin-right: 10%;
         margin-left: auto;
+
         &::before {
             content: url('images/ant.png');
         }
     }
+}
 
-    div.zen-resources ul {
+div.zen-resources ul {
+    @include large {
         background-color: pink;
         position: absolute;
         display: flex;
         color: white;
         width: 100%;
-    
+
         li {
             padding: 2em 1em;
             background-color: #047542;
@@ -217,5 +242,4 @@ div.design-archives nav[role=navigation] {
             width: 100%;
         }
     }
-    
 }
