@@ -5,67 +5,317 @@
   box-sizing: border-box;
 }
 
-header[role=banner] {
-  font-family: "Zilla Slab", serif;
-  color: #FDFDFE;
-  margin-bottom: 20em;
-  text-align: center;
+body {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
 }
 
 #css-zen-garden {
-  background: black;
-  background: linear-gradient(180deg, black 0%, #091179 20%, white 100%);
+  background: url(images/planet-svgrepo-com.svg);
 }
 
 div.page-wrapper {
   position: relative;
   margin: 20px;
+  max-width: 75em;
+  text-align: center;
+}
+div.page-wrapper .intro {
+  color: #FDFDFE;
+}
+div.page-wrapper .intro header[role=banner] {
+  font-family: "Zilla Slab", serif;
+  text-align: center;
+}
+@media (min-width: 20.188em) {
+  div.page-wrapper .intro .summary[role=article] {
+    margin-top: 45rem;
+  }
+}
+@media (min-width: 21.188em) {
+  div.page-wrapper .intro .summary[role=article] {
+    margin-top: 35rem;
+  }
+}
+@media (min-width: 27.438em) {
+  div.page-wrapper .intro .summary[role=article] {
+    margin-top: 30rem;
+  }
+}
+@media (min-width: 37.438em) {
+  div.page-wrapper .intro .summary[role=article] {
+    margin-top: 38rem;
+  }
+}
+div.page-wrapper .summary,
+div.page-wrapper .preamble,
+div.page-wrapper .main {
+  font-size: 0.9rem;
+}
+div.page-wrapper .summary,
+div.page-wrapper .preamble,
+div.page-wrapper .explanation,
+div.page-wrapper .participation,
+div.page-wrapper .benefits,
+div.page-wrapper .requirements {
+  margin-bottom: 10px;
+}
+div.page-wrapper p {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 div.design-selection {
   color: #FDFDFE;
   position: absolute;
-  top: 10em;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media (min-width: 22.75emem) {
+  div.design-selection {
+    top: 8rem;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection {
+    max-width: 60%;
+  }
+}
+div.design-selection .select {
+  font-size: 1rem;
+  text-align: center;
 }
 div.design-selection ul {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 37.438em) {
+  div.design-selection ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+  }
+}
 div.design-selection ul li {
   list-style: none;
-  background-image: url("images/planet-svgrepo-com.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 10px;
+  width: 100px;
+  height: 130px;
+  font-size: 0.7rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 10px 0;
+  line-height: 1rem;
+}
+div.design-selection ul .design-name {
+  text-align: center;
+}
+@media (max-width: 21.188em) {
+  div.design-selection ul .design-name {
+    line-height: 1.5;
+  }
 }
 div.design-selection ul li a {
   text-decoration: none;
   color: #FDFDFE;
 }
-
-.intro {
-  color: #FDFDFE;
+div.design-selection ul li:nth-of-type(1)::before {
+  background-image: url("images/space icons/svg/018-mercury.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  content: "";
+}
+div.design-selection ul li:nth-of-type(2)::before {
+  background-image: url("images/space icons/svg/036-venus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  content: "";
+}
+div.design-selection ul li:nth-of-type(3)::before {
+  background-image: url("images/space icons/svg/006-planet-earth.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  content: "";
+}
+@media (min-width: 18.688em) {
+  div.design-selection ul li:nth-of-type(3)::before {
+    height: 100px;
+  }
+}
+div.design-selection ul li:nth-of-type(4)::before {
+  background-image: url("images/space icons/svg/017-mars.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  display: block;
+  width: 80px;
+  height: 100px;
+  content: "";
+}
+@media (min-width: 26.25em) {
+  div.design-selection ul li:nth-of-type(4)::before {
+    height: 80px;
+  }
+}
+div.design-selection ul li:nth-of-type(5)::before {
+  background-image: url("images/space icons/svg/012-jupiter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  display: block;
+  width: 80px;
+  height: 100px;
+  content: "";
+}
+div.design-selection ul li:nth-of-type(6)::before {
+  background-image: url("images/space icons/svg/028-saturn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px;
+  display: block;
+  width: 80px;
+  height: 100px;
+  content: "";
+}
+div.design-selection ul li:nth-of-type(7)::before {
+  background-image: url("images/space icons/svg/035-uranus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+  display: block;
+  width: 80px;
+  height: 100px;
+  content: "";
+}
+div.design-selection ul li:nth-of-type(8)::before {
+  background-image: url("images/space icons/svg/022-neptune.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65px;
+  display: block;
+  width: 80px;
+  height: 100px;
+  content: "";
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(3) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(4) {
+    grid-column: 6;
+    grid-row: 1;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(6) {
+    grid-column: 4;
+    grid-row: 3;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(7) {
+    grid-column: 6;
+    grid-row: 3;
+  }
+}
+@media (min-width: 37.438em) {
+  div.design-selection ul li:nth-of-type(8) {
+    grid-column: 7;
+    grid-row: 2;
+  }
 }
 
 .preamble::before {
-  content: url("images/wall-e.png");
+  background-image: url("images/wall-e.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  content: "";
+  padding-top: 50px;
 }
 
 .explanation::before {
-  content: url("images/house.svg");
+  background-image: url("images/house.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+  display: block;
+  width: 100%;
+  height: 350px;
+  content: "";
 }
 
 .participation::before {
-  content: url("images/airplane.png");
+  background-image: url("images/airplane.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  content: "";
 }
 
 .benefits {
   background-color: #FEE300;
+  padding: 1em;
 }
 
 .benefits::before {
-  content: url("images/rat.png");
+  background-image: url("images/rat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  content: "";
 }
 
 .requirements {
@@ -73,7 +323,14 @@ div.design-selection ul li a {
 }
 
 .requirements::before {
-  content: url("images/ant.png");
+  background-image: url("images/ant.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  content: "";
 }
 
 div.zen-resources ul {
@@ -112,81 +369,6 @@ div.design-archives nav[role=navigation] li {
 }
 div.design-archives nav[role=navigation] li a {
   text-decoration: none;
-}
-
-@media (min-width: 37.5em) {
-  .preamble {
-    width: 50%;
-    text-align: end;
-    margin-right: 10%;
-    margin-left: auto;
-  }
-  .preamble::before {
-    content: url("images/wall-e.png");
-  }
-}
-
-@media (min-width: 37.5em) {
-  .explanation {
-    width: 50%;
-    margin-left: 10%;
-  }
-  .explanation::before {
-    content: url("images/house.svg");
-    margin-left: 110%;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .participation {
-    width: 50%;
-    text-align: end;
-    margin-right: 10%;
-    margin-left: auto;
-  }
-  .participation::before {
-    content: url("images/airplane.png");
-  }
-}
-
-@media (min-width: 37.5em) {
-  .benefits {
-    background-color: #FEE300;
-    width: 50%;
-    margin-left: 10%;
-  }
-  .benefits::before {
-    content: url("images/rat.png");
-    margin-left: 110%;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .requirements {
-    width: 50%;
-    text-align: end;
-    margin-right: 10%;
-    margin-left: auto;
-  }
-  .requirements::before {
-    content: url("images/ant.png");
-  }
-}
-
-@media (min-width: 37.5em) {
-  div.zen-resources ul {
-    background-color: pink;
-    position: absolute;
-    display: flex;
-    color: white;
-    width: 100%;
-  }
-  div.zen-resources ul li {
-    padding: 2em 1em;
-    background-color: #047542;
-    border: 1px solid #0D0D0D;
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

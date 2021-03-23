@@ -14,9 +14,16 @@ $accent2: #DC022B;
 $accent3: #047542;
 
 //breakpoints
-$break-small: 20em;
-$break-medium: 37.5em;
-$break-large: 60em;
+$break-pre-small: 18.688em; //299px
+$break-small: 20em; //320px
+$break-small-20: 20.188em; //323pxpx
+$break-small-21: 21.188em; //339px
+$break-small-22: 22.750emem; //364px
+$break-small-24: 24.938em; //399px
+$break-small-26: 26.250em; //420px
+$break-small-27: 27.438em; //439px
+$break-medium: 37.438em; //600px
+$break-large: 75em; //1200px
 
 //mixins
 @mixin center {
@@ -24,8 +31,87 @@ $break-large: 60em;
     margin: 0 auto;
 }
 
+@mixin pre-small {
+    @media (max-width: #{$break-pre-small}) {
+        @content;
+    }
+}
+
+@mixin pre-small-min {
+    @media (min-width: #{$break-pre-small}) {
+        @content;
+    }
+}
+
+
 @mixin small {
     @media (max-width: #{$break-small}) {
+        @content;
+    }
+}
+
+@mixin small-20 {
+    @media (max-width: #{$break-small-20}) {
+        @content;
+    }
+}
+
+@mixin small-min-20 {
+    @media (min-width: #{$break-small-20}) {
+        @content;
+    }
+}
+
+@mixin small-21 {
+    @media (max-width: #{$break-small-21}) {
+        @content;
+    }
+}
+
+@mixin small-min-21 {
+    @media (min-width: #{$break-small-21}) {
+        @content;
+    }
+}
+
+@mixin small-22 {
+    @media (max-width: #{$break-small-22}) {
+        @content;
+    }
+}
+
+@mixin small-min-22 {
+    @media (min-width: #{$break-small-22}) {
+        @content;
+    }
+}
+
+@mixin small-24 {
+    @media (max-width: #{$break-small-24}) {
+        @content;
+    }
+}
+
+@mixin small-min-26 {
+    @media (min-width: #{$break-small-26}) {
+        @content;
+    }
+}
+
+@mixin small-27 {
+    @media (max-width: #{$break-small-27}) {
+        @content;
+    }
+}
+
+@mixin small-min-27 {
+    @media (min-width: #{$break-small-27}) {
+        @content;
+    }
+}
+
+@mixin medium-min {
+    @media (min-width: #{$break-medium}) {
         @content;
     }
 }
@@ -42,72 +128,344 @@ $break-large: 60em;
     box-sizing: border-box;
 }
 
-header[role=banner] {
-    font-family: $header-font;
-    color: $secondary-color;
-    margin-bottom: 20em;
-    text-align: center;
+body {
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-family: $base-font;
 }
 
 #css-zen-garden {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 17, 121, 1) 20%, rgba(255, 255, 255, 1) 100%);
+    background: url(images/planet-svgrepo-com.svg)
+    //background: rgb(0, 0, 0);
+    //background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 17, 121, 1) 20%, rgba(255, 255, 255, 1) 100%);
 }
 
-div.page-wrapper {    
+div.page-wrapper {
     position: relative;
     margin: 20px;
+    max-width: $break-large;
+    text-align: center;
+
+
+    .intro {
+        color: $secondary-color;
+
+        header[role=banner] {
+            font-family: $header-font;
+            text-align: center;
+        }
+
+        .summary[role=article] {          
+
+            @include small-min-20 {
+                margin-top: 45rem;
+            }
+
+            @include small-min-21 {
+                margin-top: 35rem;
+            }
+
+            @include small-min-27 {
+                margin-top: 30rem;
+            }
+
+            @include medium-min {
+                margin-top: 38rem;
+            }
+        }
+    }
+
+    .summary,
+    .preamble,
+    .main {
+        font-size: .9rem;
+    }
+
+    .summary,
+    .preamble,
+    .explanation,
+    .participation,
+    .benefits,
+    .requirements {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        text-align: left;
+    }
 }
-
-
 
 div.design-selection {
     color: $secondary-color;
     position: absolute;
-    top: 10em;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    @include small-min-22 {
+        top: 8rem;
+    }
+    
+    @include large {
+        max-width: 60%;
+    }
+
+    .select {
+        font-size: 1rem;
+        text-align: center;          
+        
+       
+    }
 
     ul {
+        position: relative;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
 
+        @include large {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: auto;
+            justify-items: center;
+            align-items: center;
+            
+        }
+
         li {
             list-style: none;
-            background-image: url('images/planet-svgrepo-com.svg');
-            background-repeat: no-repeat;
-            background-position: 50% 10px;
+            width: 100px;
+            height: 130px;
+            font-size: .7rem;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            margin: 10px 0;
+            line-height: 1rem;
+        }
+
+        .design-name {
+            text-align: center;
+
+            @include small-21 {
+                line-height: 1.5;
+            }
         }
 
         li a {
             text-decoration: none;
             color: $secondary-color;
         }
+
+        li:nth-of-type(1)::before {
+            background-image: url('images/space icons/svg/018-mercury.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 45px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            content: "";
+        }
+
+        li:nth-of-type(2)::before {
+            background-image: url('images/space icons/svg/036-venus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 55px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            content: "";
+        }
+
+        li:nth-of-type(3)::before {
+            background-image: url('images/space icons/svg/006-planet-earth.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            content: "";
+
+            @include pre-small-min {
+                height: 100px;
+            }
+        }
+
+        li:nth-of-type(4)::before {
+            background-image: url('images/space icons/svg/017-mars.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 80px;
+            height: 100px;
+            content: "";
+
+            @include small-min-26 {
+                height: 80px;
+            }
+        }
+
+        li:nth-of-type(5)::before {
+            background-image: url('images/space icons/svg/012-jupiter.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80px;
+            display: block;
+            width: 80px;
+            height: 100px;
+            content: "";
+        }
+
+        li:nth-of-type(6)::before {
+            background-image: url('images/space icons/svg/028-saturn.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75px;
+            display: block;
+            width: 80px;
+            height: 100px;
+            content: "";
+        }
+
+        li:nth-of-type(7)::before {
+            background-image: url('images/space icons/svg/035-uranus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70px;
+            display: block;
+            width: 80px;
+            height: 100px;
+            content: "";
+        }
+
+        li:nth-of-type(8)::before {
+            background-image: url('images/space icons/svg/022-neptune.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65px;
+            display: block;
+            width: 80px;
+            height: 100px;
+            content: "";
+        }
+
+        li:nth-of-type(1) {
+            @include large {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+
+        li:nth-of-type(2) {
+            @include large {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+
+        li:nth-of-type(3) {
+            @include large {
+                grid-column: 4;
+                grid-row: 1;
+            }
+        }
+
+        li:nth-of-type(4) {
+            @include large {
+                grid-column: 6;
+                grid-row: 1;
+            }
+        }
+
+        li:nth-of-type(5) {
+            @include large {
+                grid-column: 2;
+                grid-row: 3;
+            }
+        }
+
+        li:nth-of-type(6) {
+            @include large {
+                grid-column: 4;
+                grid-row: 3;
+            }
+        }
+
+        li:nth-of-type(7) {
+            @include large {
+                grid-column: 6;
+                grid-row: 3;
+            }
+        }
+
+        li:nth-of-type(8) {
+            @include large {
+                grid-column: 7;
+                grid-row: 2;
+            }
+        }
+
+
     }
 }
 
-.intro {
-    color: $secondary-color;
-}
-
 .preamble::before {
-    content: url('images/wall-e.png');
+    background-image: url('images/wall-e.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    content: "";
+    padding-top: 50px;
 }
 
 .explanation::before {
-    content: url('images/house.svg');
+    background-image: url('images/house.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+    display: block;
+    width: 100%;
+    height: 350px;
+    content: "";
 }
 
 .participation::before {
-    content: url('images/airplane.png');
+    background-image: url('images/airplane.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    content: "";
 }
 
 .benefits {
     background-color: #FEE300;
+    padding: 1em;
 }
 
 .benefits::before {
-    content: url('images/rat.png');
+    background-image: url('images/rat.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    content: "";
 }
 
 .requirements {
@@ -116,7 +474,14 @@ div.design-selection {
 
 
 .requirements::before {
-    content: url('images/ant.png');
+    background-image: url('images/ant.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    content: "";
 }
 
 div.zen-resources ul {
@@ -159,87 +524,5 @@ div.design-archives nav[role=navigation] {
     li a {
         text-decoration: none;
 
-    }
-}
-
-.preamble {
-    @include large {
-        width: 50%;
-        text-align: end;
-        margin-right: 10%;
-        margin-left: auto;
-
-        &::before {
-            content: url('images/wall-e.png');
-        }
-    }
-}
-
-.explanation {
-    @include large {
-        width: 50%;
-        margin-left: 10%;
-
-        &::before {
-            content: url('images/house.svg');
-            margin-left: 110%;
-        }
-    }
-}
-
-.participation {
-    @include large {
-        width: 50%;
-        text-align: end;
-        margin-right: 10%;
-        margin-left: auto;
-
-        &::before {
-            content: url('images/airplane.png');
-        }
-    }
-}
-
-.benefits {
-    @include large {
-        background-color: #FEE300;
-        width: 50%;
-        margin-left: 10%;
-
-        &::before {
-            content: url('images/rat.png');
-            margin-left: 110%;
-        }
-    }
-}
-
-
-.requirements {
-    @include large {
-        width: 50%;
-        text-align: end;
-        margin-right: 10%;
-        margin-left: auto;
-
-        &::before {
-            content: url('images/ant.png');
-        }
-    }
-}
-
-div.zen-resources ul {
-    @include large {
-        background-color: pink;
-        position: absolute;
-        display: flex;
-        color: white;
-        width: 100%;
-
-        li {
-            padding: 2em 1em;
-            background-color: #047542;
-            border: 1px solid $base-color;
-            width: 100%;
-        }
     }
 }
