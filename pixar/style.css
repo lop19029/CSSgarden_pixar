@@ -13,8 +13,10 @@ header[role=banner] {
 }
 
 #css-zen-garden {
-  background: black;
-  background: linear-gradient(180deg, black 0%, #091179 20%, white 100%);
+  background-image: url("images/background/background_small.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.page-wrapper {
@@ -186,6 +188,15 @@ div.design-archives nav[role=navigation] li a {
     background-color: #047542;
     border: 1px solid #0D0D0D;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #css-zen-garden {
+    background-image: url("images/background/background_big.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

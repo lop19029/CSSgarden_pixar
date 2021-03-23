@@ -49,9 +49,12 @@ header[role=banner] {
     text-align: center;
 }
 
+//Background
 #css-zen-garden {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 17, 121, 1) 20%, rgba(255, 255, 255, 1) 100%);
+    background-image: url("images/background/background_small.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div.page-wrapper {    
@@ -242,4 +245,17 @@ div.zen-resources ul {
             width: 100%;
         }
     }
+}
+
+//Responsive Background
+@media only screen and (min-width: 600px) {
+
+//Background
+#css-zen-garden {
+    background-image: url("images/background/background_big.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 }
