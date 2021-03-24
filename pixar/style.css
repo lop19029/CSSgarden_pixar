@@ -12,6 +12,17 @@ header[role=banner] {
   text-align: center;
 }
 
+header h1 {
+  background: transparent url("images/title/LampOnTitle.png") no-repeat top left;
+  background-size: contain;
+  margin-top: 10px;
+  width: 100%;
+  height: 540px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 #css-zen-garden {
   background-image: url("images/background/background_small.png");
   background-position: center;
