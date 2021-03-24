@@ -134,10 +134,12 @@ body {
     font-family: $base-font;
 }
 
+//Background
 #css-zen-garden {
-    background: url(images/planet-svgrepo-com.svg)
-    //background: rgb(0, 0, 0);
-    //background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 17, 121, 1) 20%, rgba(255, 255, 255, 1) 100%);
+    background-image: url("images/background/background_small.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div.page-wrapper {
