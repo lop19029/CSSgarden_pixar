@@ -12,17 +12,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-header h1 {
-  background: transparent url("images/title/LampOnTitle.png") no-repeat top left;
-  background-size: contain;
-  margin-top: 10px;
-  width: 100%;
-  height: 540px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 #css-zen-garden {
   background-image: url("images/background/background_small.png");
   background-position: center;
@@ -45,8 +34,23 @@ div.page-wrapper .intro header[role=banner] {
   font-family: "Zilla Slab", serif;
   color: #FDFDFE;
 }
+div.page-wrapper .intro header[role=banner] h1 {
+  background: transparent url("images/title/LampOnTitle.png") no-repeat top left;
+  background-size: contain;
+  margin-top: 1rem;
+  width: 100%;
+  height: 540px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+div.page-wrapper .intro header[role=banner] h2 {
+  margin-top: -23em;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
 div.page-wrapper .intro .summary[role=article] p:nth-of-type(1) {
-  margin: 2rem 0 35rem 0;
+  margin: 3rem 0 35rem 0;
   text-align: center;
   color: #FDFDFE;
 }
@@ -76,7 +80,7 @@ div.page-wrapper p {
 div.design-selection {
   color: #FDFDFE;
   position: absolute;
-  top: 15rem;
+  top: 19rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -446,7 +450,9 @@ div.design-archives nav[role=navigation] ul .viewall::after {
   color: #FDFDFE;
 }
 
-.archives, .resources {
+.archives,
+.resources,
+.banner h1 {
   display: none;
 }
 
