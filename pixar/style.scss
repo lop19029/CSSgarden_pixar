@@ -139,11 +139,10 @@ body {
     background-size: cover;
     margin-top: 0;
     padding: 0;
-    max-width: $break-medium;
+    
 
     @include large {
         background-image: url("images/background/background_big.png");
-
     }
 }
 
