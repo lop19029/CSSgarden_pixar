@@ -344,9 +344,11 @@ div.design-selection ul li:nth-of-type(8)::before {
   }
 }
 
-.participation {
-  margin-left: 20rem;
-  margin-top: 5rem;
+@media (min-width: 37.438em) {
+  .participation {
+    margin-left: 20rem;
+    margin-top: 5rem;
+  }
 }
 
 .participation::before {
