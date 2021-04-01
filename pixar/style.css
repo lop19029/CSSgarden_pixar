@@ -158,8 +158,8 @@ div.design-selection ul li:nth-of-type(1)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 6s ease-in-out infinite;
-  animation: float1 6s ease-in-out infinite;
+  -webkit-animation: float 20s linear infinite forwards;
+  animation: float1 20s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(2)::before {
   background-image: url("images/space icons/svg/036-venus.svg");
@@ -171,8 +171,8 @@ div.design-selection ul li:nth-of-type(2)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 6s ease-in-out infinite;
-  animation: float2 6s ease-in-out infinite;
+  -webkit-animation: float 15s linear infinite forwards;
+  animation: float2 15s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(3)::before {
   background-image: url("images/space icons/svg/006-planet-earth.svg");
@@ -184,8 +184,8 @@ div.design-selection ul li:nth-of-type(3)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 6s ease-in-out infinite;
-  animation: float3 6s ease-in-out infinite;
+  -webkit-animation: float 20s linear infinite forwards;
+  animation: float3 20s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(4)::before {
   background-image: url("images/space icons/svg/017-mars.svg");
@@ -301,7 +301,7 @@ div.design-selection ul li:nth-of-type(8)::before {
   0% {
     transform: translatey(0px);
   }
-  20% {
+  60% {
     transform: translatey(-10px);
   }
   100% {
@@ -344,8 +344,8 @@ div.design-selection ul li:nth-of-type(8)::before {
   content: "";
   padding-top: 50px;
   transform: translatey(0px);
-  -webkit-animation: float 10s ease-in-out infinite;
-  animation: wall-e 10s ease-in-out infinite;
+  -webkit-animation: float 1s ease-in-out infinite forwards;
+  animation: wall-e 70s linear infinite forwards;
 }
 @media (min-width: 37.438em) {
   .preamble::before {
@@ -356,19 +356,10 @@ div.design-selection ul li:nth-of-type(8)::before {
 
 @keyframes wall-e {
   0% {
-    transform: translatey(0px);
-  }
-  20% {
-    transform: translatey(-5px);
-  }
-  40% {
-    transform: rotate(30deg);
-  }
-  80% {
-    transform: translatey(-10px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translatey(0px);
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 37.438em) {

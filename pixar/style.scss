@@ -291,8 +291,8 @@ div.design-selection {
             height: 80px;
             content: "";
             transform: translatey(0px);
-            -webkit-animation: float 6s ease-in-out infinite;
-            animation: float1 6s ease-in-out infinite;
+            -webkit-animation: float 20s linear infinite forwards;
+            animation: float1 20s linear infinite forwards;
         }
 
         li:nth-of-type(2)::before {
@@ -305,8 +305,8 @@ div.design-selection {
             height: 80px;
             content: "";
             transform: translatey(0px);
-            -webkit-animation: float 6s ease-in-out infinite;
-            animation: float2 6s ease-in-out infinite;
+            -webkit-animation: float 15s linear infinite forwards;
+            animation: float2 15s linear infinite forwards;
         }
 
         li:nth-of-type(3)::before {
@@ -319,9 +319,8 @@ div.design-selection {
             height: 80px;
             content: "";
             transform: translatey(0px);
-            -webkit-animation: float 6s ease-in-out infinite;
-            animation: float3 6s ease-in-out infinite;
-
+            -webkit-animation: float 20s linear infinite forwards;
+            animation: float3 20s linear infinite forwards;
             //@include pre-small-min {
             //   height: 100px;
             // }
@@ -466,7 +465,7 @@ div.design-selection {
         transform: translatey(0px);
     }
 
-    20% {
+    60% {
         transform: translatey(-10px);
     }
 
@@ -516,8 +515,8 @@ div.design-selection {
     content: "";
     padding-top: 50px;
     transform: translatey(0px);
-    -webkit-animation: float 10s ease-in-out infinite;
-    animation: wall-e 10s ease-in-out infinite;
+    -webkit-animation: float 1s ease-in-out infinite forwards;
+    animation: wall-e 70s linear infinite forwards;
 
     @include large {
         position: absolute;
@@ -527,23 +526,10 @@ div.design-selection {
 
 @keyframes wall-e {
     0% {
-        transform: translatey(0px);
+        transform: rotate(0deg);
     }
-
-    20% {
-        transform: translatey(-5px);
-    }
-
-    40% {
-        transform: rotate(30deg);
-    }
-
-    80% {
-        transform: translatey(-10px);
-    }
-
     100% {
-        transform: translatey(0px);
+        transform: rotate(360deg);
     }
 }
 
