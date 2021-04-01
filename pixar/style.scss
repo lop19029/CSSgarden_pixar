@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zilla+Slab:wght@600&display=swap');
 
-//fonts
+//Fonts
 $base-font: 'Montserrat',
 sans-serif;
 $header-font: 'Zilla Slab',
 serif;
 
-//colors
+//Colors
 $base-color: #0D0D0D;
 $secondary-color: #FDFDFE;
 $accent1: #FEE300;
 $accent2: #DC022B;
 $accent3: #047542;
 
-//breakpoints
+//Breakpoints
 $break-pre-small: 18.688em; //299px
 $break-small: 20em; //320px
 $break-small-20: 20.188em; //323pxpx
@@ -25,7 +25,7 @@ $break-small-27: 27.438em; //439px
 $break-medium: 37.438em; //600px
 $break-large: 75em; //1200px
 
-//mixins
+//Mixins
 @mixin center {
     max-width: 1200px;
     margin: 0 auto;
@@ -129,8 +129,6 @@ body {
     @include center;
 }
 
-
-
 //Background
 #css-zen-garden {
     background-image: url("images/background/background_small.png");
@@ -139,7 +137,6 @@ body {
     background-size: cover;
     margin-top: 0;
     padding: 0;
-    
 
     @include large {
         background-image: url("images/background/background_big.png");
@@ -155,7 +152,7 @@ div.page-wrapper {
         text-align: center;
         position: relative;
 
-        //header
+        //Header
         header[role=banner] {
             font-family: $header-font;
             color: $secondary-color;
@@ -187,7 +184,6 @@ div.page-wrapper {
                 margin: 3rem 0 35rem 0;
                 text-align: center;
                 color: $secondary-color;
-
             }
 
             & p:nth-of-type(2) {
@@ -196,6 +192,7 @@ div.page-wrapper {
         }
     }
 
+    //Font sizes for each section
     .summary,
     .preamble,
     .main,
@@ -204,6 +201,7 @@ div.page-wrapper {
         font-size: .9rem;
     }
 
+    //Bottom margins for each section
     .summary,
     .preamble,
     .explanation,
@@ -213,14 +211,14 @@ div.page-wrapper {
         margin-bottom: 10px;
     }
 
+    //Bottom margins for each p
     p {
         margin-bottom: 15px;
         text-align: left;
     }
 }
 
-
-
+//Planets
 div.design-selection {
     color: $secondary-color;
     position: absolute;
@@ -252,7 +250,6 @@ div.design-selection {
             grid-template-rows: auto;
             justify-items: center;
             align-items: center;
-
         }
 
         li {
@@ -283,6 +280,7 @@ div.design-selection {
             }
         }
 
+        //Planet svgs
         li:nth-of-type(1)::before {
             background-image: url('images/space icons/svg/018-mercury.svg');
             background-repeat: no-repeat;
@@ -292,6 +290,9 @@ div.design-selection {
             width: 80px;
             height: 80px;
             content: "";
+            transform: translatey(0px);
+            -webkit-animation: float 6s ease-in-out infinite;
+            animation: float1 6s ease-in-out infinite;
         }
 
         li:nth-of-type(2)::before {
@@ -303,6 +304,9 @@ div.design-selection {
             width: 80px;
             height: 80px;
             content: "";
+            transform: translatey(0px);
+            -webkit-animation: float 6s ease-in-out infinite;
+            animation: float2 6s ease-in-out infinite;
         }
 
         li:nth-of-type(3)::before {
@@ -314,10 +318,13 @@ div.design-selection {
             width: 80px;
             height: 80px;
             content: "";
+            transform: translatey(0px);
+            -webkit-animation: float 6s ease-in-out infinite;
+            animation: float3 6s ease-in-out infinite;
 
-            @include pre-small-min {
-                height: 100px;
-            }
+            //@include pre-small-min {
+            //   height: 100px;
+            // }
         }
 
         li:nth-of-type(4)::before {
@@ -330,9 +337,9 @@ div.design-selection {
             height: 100px;
             content: "";
 
-            @include small-min-26 {
-                height: 80px;
-            }
+            //@include small-min-26 {
+            //    height: 80px;
+            //}
         }
 
         li:nth-of-type(5)::before {
@@ -439,6 +446,51 @@ div.design-selection {
     }
 }
 
+//Keyframes for planets
+@keyframes float1 {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translatey(0px);
+    }
+
+    20% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translatey(0px);
+    }
+
+    40% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+
 .main {
     position: relative;
 }
@@ -449,10 +501,10 @@ div.design-selection {
     @include large {
         margin-left: 20rem;
         margin-top: 3rem;
-
     }
 }
 
+//Body images
 .preamble::before {
     background-image: url('images/wall-e.png');
     background-repeat: no-repeat;
@@ -463,11 +515,35 @@ div.design-selection {
     height: 200px;
     content: "";
     padding-top: 50px;
+    transform: translatey(0px);
+    -webkit-animation: float 10s ease-in-out infinite;
+    animation: wall-e 10s ease-in-out infinite;
 
     @include large {
         position: absolute;
         left: -15rem;
+    }
+}
 
+@keyframes wall-e {
+    0% {
+        transform: translatey(0px);
+    }
+
+    20% {
+        transform: translatey(-5px);
+    }
+
+    40% {
+        transform: rotate(30deg);
+    }
+
+    80% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
     }
 }
 
@@ -487,6 +563,9 @@ div.design-selection {
     width: 100%;
     height: 350px;
     content: "";
+    transform: translatey(0px);
+    -webkit-animation: float 10s ease-in-out infinite;
+    animation: house 10s ease-in-out infinite;
 
     @include large {
         position: absolute;
@@ -495,9 +574,35 @@ div.design-selection {
     }
 }
 
+@keyframes house {
+    0% {
+        transform: translatey(0px);
+    }
+
+    20% {
+        transform: translatey(-5px);
+    }
+
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 .participation {
     @include large {
-    margin-left: 20rem;
+        margin-left: 20rem;
         margin-top: 5rem;
     }
 }
@@ -511,15 +616,38 @@ div.design-selection {
     width: 100%;
     height: 200px;
     content: "";
+    transform: translatey(0px);
+    -webkit-animation: float 10s ease-in-out infinite;
+    animation: airplane 10s ease-in-out infinite;
 
     @include large {
-    position: absolute;
+        position: absolute;
         left: -15rem;
         top: 35rem;
     }
 }
 
+@keyframes airplane {
+    0% {
+        transform: translatey(0px);
+    }
+
+    20% {
+        transform: translatey(-5px);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 .benefits {
+
     h3,
     p {
         background-color: #FEE300;
@@ -541,6 +669,8 @@ div.design-selection {
     width: 100%;
     height: 200px;
     content: "";
+    -webkit-animation: float 2s ease-in-out infinite;
+    animation: rat 2s ease-in-out infinite;
 
     @include large {
         position: absolute;
@@ -549,139 +679,111 @@ div.design-selection {
     }
 }
 
-.requirements {
-    color: $secondary-color;
-
-    @include large {
-        margin-left: 20rem;
-        margin-bottom: 1rem;
+@keyframes rat {
+    0% {
+        transform: translatey(0px) scale(1.25, 0.75);
     }
 
-}
+    50% {
+        transform: translatey(10px) scale(1, 1);
+    }
 
-.requirements::before {
-    background-image: url('images/ant.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150px;
-    display: block;
-    width: 100%;
-    height: 200px;
-    content: "";
+    55% {
+        transform: translatey(5px) rotate(15deg);
+    }
 
-    @include large {
-        position: absolute;
-        left: -15rem;
-        bottom: 25rem;
+    60% {
+        transform: rotate(-15deg);
+    }
+
+    65% {
+        transform: rotate(15deg);
+    }
+
+    70% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: translatey(0) scale(1.25, 0.75);
     }
 }
 
-div.zen-resources ul {
-    position: absolute;
-    bottom: 0rem;
-    color: white;
-    width: 100%;
-    //display: none;
-    margin-top: 60rem;
+    .requirements {
+        color: $secondary-color;
 
-    li {
-        padding: .5rem;
-        width: 100%;
-        border: 1px solid $secondary-color;
-        list-style: none;
-        text-align: center;
-
-        a:link,
-        a:visited {
-            text-decoration: none;
-            color: $secondary-color;
+        @include large {
+            margin-left: 20rem;
+            margin-bottom: 1rem;
         }
     }
-}
 
-footer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem 0;
-
-    a:link,
-    a:visited {
-        text-decoration: none;
-        color: $secondary-color;
-    }
-
-    a:nth-of-type(1)::before {
-        background-image: url('images/footer/html.ico');
+    .requirements::before {
+        background-image: url('images/ant.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 50px;
+        background-size: 150px;
         display: block;
-        width: 50px;
-        height: 50px;
+        width: 100%;
+        height: 200px;
         content: "";
+        -webkit-animation: float 10s ease-in-out infinite;
+    animation: ant 10s ease-in-out infinite;
+
+        @include large {
+            position: absolute;
+            left: -15rem;
+            bottom: 25rem;
+        }
     }
 
-    a:nth-of-type(2)::before {
-        background-image: url('images/footer/css.ico');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50px;
-        display: block;
-        width: 50px;
-        height: 50px;
-        content: "";
+    @keyframes ant {
+        0% {
+            transform: translatey(-200px);
+        }
+    
+        50% {
+            transform: translatey(100px);
+        }
+    
+          
+        100% {
+            transform: translatey(-200px);
+        }
     }
 
-    a:nth-of-type(3)::before {
-        background-image: url('images/footer/cc.ico');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50px;
-        display: block;
-        width: 50px;
-        height: 50px;
-        content: "";
+    //Resources
+    div.zen-resources ul {
+        position: absolute;
+        bottom: 0rem;
+        color: white;
+        width: 100%;
+        //display: none;
+        margin-top: 60rem;
+
+        li {
+            padding: .5rem;
+            width: 100%;
+            border: 1px solid $secondary-color;
+            list-style: none;
+            text-align: center;
+
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
     }
 
-    a:nth-of-type(4)::before {
-        background-image: url('images/footer/ally.ico');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50px;
-        display: block;
-        width: 50px;
-        height: 50px;
-        content: "";
-    }
-
-    a:nth-of-type(5)::before {
-        background-image: url('images/footer/gh.ico');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50px;
-        display: block;
-        width: 50px;
-        height: 50px;
-        content: "";
-    }
-}
-
-div.design-archives nav[role=navigation] {
-
-    ul {
+    //Footer
+    footer {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: space-between;
-
-        li {
-            list-style: none;
-            border: 1px solid $secondary-color;
-            padding: .5rem;
-        }
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem 0;
 
         a:link,
         a:visited {
@@ -689,17 +791,94 @@ div.design-archives nav[role=navigation] {
             color: $secondary-color;
         }
 
-
-        .viewall::after {
-            content: "\203A";
-            color: $secondary-color;
+        a:nth-of-type(1)::before {
+            background-image: url('images/footer/html.ico');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: "";
         }
 
-    }
-}
+        a:nth-of-type(2)::before {
+            background-image: url('images/footer/css.ico');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: "";
+        }
 
-.archives,
-.resources,
-.banner h1 {
-    display: none;
-}
+        a:nth-of-type(3)::before {
+            background-image: url('images/footer/cc.ico');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: "";
+        }
+
+        a:nth-of-type(4)::before {
+            background-image: url('images/footer/ally.ico');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: "";
+        }
+
+        a:nth-of-type(5)::before {
+            background-image: url('images/footer/gh.ico');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: "";
+        }
+    }
+
+    //Archives
+    div.design-archives nav[role=navigation] {
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                list-style: none;
+                border: 1px solid $secondary-color;
+                padding: .5rem;
+            }
+
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $secondary-color;
+            }
+
+
+            .viewall::after {
+                content: "\203A";
+                color: $secondary-color;
+            }
+
+        }
+    }
+
+    .archives,
+    .resources,
+    .banner h1 {
+        display: none;
+    }
