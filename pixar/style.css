@@ -418,13 +418,13 @@ div.design-selection ul li:nth-of-type(8)::before {
 }
 
 .participation::before {
-  background-image: url("images/airplane.png");
+  background-image: url("images/airplane.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 150px;
+  background-size: 300px;
   display: block;
   width: 100%;
-  height: 200px;
+  height: 300px;
   content: "";
   transform: translatey(0px);
   -webkit-animation: float 10s ease-in-out infinite;
@@ -466,13 +466,13 @@ div.design-selection ul li:nth-of-type(8)::before {
 }
 
 .benefits::before {
-  background-image: url("images/rat.png");
+  background-image: url("images/rat.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 150px;
+  background-size: 200px;
   display: block;
   width: 100%;
-  height: 200px;
+  height: 300px;
   content: "";
   -webkit-animation: float 2s ease-in-out infinite;
   animation: rat 2s ease-in-out infinite;
@@ -519,13 +519,13 @@ div.design-selection ul li:nth-of-type(8)::before {
 }
 
 .requirements::before {
-  background-image: url("images/ant.png");
+  background-image: url("images/ant.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 150px;
+  background-size: 300px;
   display: block;
   width: 100%;
-  height: 200px;
+  height: 300px;
   content: "";
   -webkit-animation: float 10s ease-in-out infinite;
   animation: ant 10s ease-in-out infinite;
