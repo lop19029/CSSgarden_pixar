@@ -19,10 +19,11 @@ $break-small: 20em; //320px
 $break-small-20: 20.188em; //323pxpx
 $break-small-21: 21.188em; //339px
 $break-small-22: 22.750emem; //364px
-$break-small-24: 24.938em; //399px
+$break-small-24: 24.000em; //384px
 $break-small-26: 26.250em; //420px
-$break-small-27: 27.438em; //439px
-$break-medium: 37.438em; //600px
+$break-small-27: 27.438em; //439px /
+$break-small-30: 30.000em; //480px /
+$break-medium: 37.500em; //600px / 
 $break-large: 75em; //1200px
 
 //Mixins
@@ -86,7 +87,7 @@ $break-large: 75em; //1200px
     }
 }
 
-@mixin small-24 {
+@mixin small-min-24 {
     @media (max-width: #{$break-small-24}) {
         @content;
     }
@@ -110,8 +111,21 @@ $break-large: 75em; //1200px
     }
 }
 
-@mixin large {
+@mixin small-min-30 {
+    @media (min-width: #{$break-small-30}) {
+        @content;
+    }
+}
+
+@mixin medium {
     @media (min-width: $break-medium) {
+        @content;
+    }
+}
+
+
+@mixin large {
+    @media (min-width: $break-large) {
         @content;
     }
 }
@@ -127,6 +141,7 @@ body {
     line-height: 1.5;
     font-family: $base-font;
     @include center;
+    max-height: 100%;
 }
 
 //Background
@@ -138,7 +153,7 @@ body {
     margin-top: 0;
     padding: 0;
 
-    @include large {
+    @include medium {
         background-image: url("images/background/background_big.png");
     }
 }
@@ -158,24 +173,33 @@ div.page-wrapper {
             color: $secondary-color;
 
             h1 {
-                background: transparent url("images/title/LampOnTitle.png") no-repeat top left;
+                background: transparent url("images/title/LampOnTitle.png") no-repeat center top;
                 background-size: contain;
                 margin-top: 1rem;
-                width: 100%;
+                max-width: 500px;
                 height: 540px;
                 text-indent: 100%;
                 white-space: nowrap;
                 overflow: hidden;
+
+                @include medium {
+                    max-width: 700px;
+                    height: 740px;
+                    margin: 0 auto;
+                }                
             }
 
             h2 {
-                margin-top: -23em;
+                margin-top: -25rem;
                 font-size: 1.2rem;
-                opacity: .7;
+                opacity: .7;           
 
-                @include large {
-                    margin-top: -18em;
+                @include small-min-30 {
+                    margin-top: -34rem;
                 }
+                @include medium {
+                    margin-top: -31rem;
+                }               
             }
         }
 
@@ -184,10 +208,15 @@ div.page-wrapper {
                 margin: 3rem 0 35rem 0;
                 text-align: center;
                 color: $secondary-color;
+
+                @include small-min-27 {
+                    margin-bottom: 25rem;
+                }
             }
 
             & p:nth-of-type(2) {
                 text-align: center;
+                margin-bottom: 3rem;
             }
         }
     }
@@ -198,7 +227,11 @@ div.page-wrapper {
     .main,
     .zen-resources,
     .design-archives {
-        font-size: .9rem;
+        font-size: .85rem;
+
+        @include medium {
+            font-size: 1rem;
+        }
     }
 
     //Bottom margins for each section
@@ -208,12 +241,12 @@ div.page-wrapper {
     .participation,
     .benefits,
     .requirements {
-        margin-bottom: 10px;
+        margin-bottom: 2.5rem;
     }
 
     //Bottom margins for each p
     p {
-        margin-bottom: 15px;
+        margin-bottom: .5rem;
         text-align: left;
     }
 }
@@ -222,14 +255,13 @@ div.page-wrapper {
 div.design-selection {
     color: $secondary-color;
     position: absolute;
-    top: 19rem;
+    top: 20rem;
     left: 0;
     right: 0;
     margin: auto;
 
-    @include large {
-        //max-width: 60%;
-        margin-top: 2em;
+    @include medium {        
+        margin-top: 5em;
     }
 
     .select {
@@ -244,12 +276,13 @@ div.design-selection {
         align-items: center;
         justify-content: center;
 
-        @include large {
+        @include medium {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             grid-template-rows: auto;
             justify-items: center;
             align-items: center;
+            height: 35rem;
         }
 
         li {
@@ -263,8 +296,7 @@ div.design-selection {
             justify-content: center;
             align-content: center;
             margin: 10px 0;
-            line-height: .9rem;
-
+            
             a:link,
             a:visited {
                 text-decoration: none;
@@ -293,6 +325,8 @@ div.design-selection {
             transform: translatey(0px);
             -webkit-animation: float 20s linear infinite forwards;
             animation: float1 20s linear infinite forwards;
+
+            
         }
 
         li:nth-of-type(2)::before {
@@ -307,6 +341,8 @@ div.design-selection {
             transform: translatey(0px);
             -webkit-animation: float 15s linear infinite forwards;
             animation: float2 15s linear infinite forwards;
+
+           
         }
 
         li:nth-of-type(3)::before {
@@ -321,9 +357,8 @@ div.design-selection {
             transform: translatey(0px);
             -webkit-animation: float 20s linear infinite forwards;
             animation: float3 20s linear infinite forwards;
-            //@include pre-small-min {
-            //   height: 100px;
-            // }
+            
+            
         }
 
         li:nth-of-type(4)::before {
@@ -336,9 +371,7 @@ div.design-selection {
             height: 100px;
             content: "";
 
-            //@include small-min-26 {
-            //    height: 80px;
-            //}
+            
         }
 
         li:nth-of-type(5)::before {
@@ -350,6 +383,8 @@ div.design-selection {
             width: 80px;
             height: 100px;
             content: "";
+
+                    
         }
 
         li:nth-of-type(6)::before {
@@ -361,6 +396,8 @@ div.design-selection {
             width: 80px;
             height: 100px;
             content: "";
+
+                  
         }
 
         li:nth-of-type(7)::before {
@@ -372,6 +409,8 @@ div.design-selection {
             width: 80px;
             height: 100px;
             content: "";
+
+            
         }
 
         li:nth-of-type(8)::before {
@@ -386,56 +425,56 @@ div.design-selection {
         }
 
         li:nth-of-type(1) {
-            @include large {
+            @include medium {
                 grid-column: 1;
                 grid-row: 2;
             }
         }
 
         li:nth-of-type(2) {
-            @include large {
+            @include medium {
                 grid-column: 2;
                 grid-row: 1;
             }
         }
 
         li:nth-of-type(3) {
-            @include large {
+            @include medium {
                 grid-column: 4;
                 grid-row: 1;
             }
         }
 
         li:nth-of-type(4) {
-            @include large {
+            @include medium {
                 grid-column: 6;
                 grid-row: 1;
             }
         }
 
         li:nth-of-type(5) {
-            @include large {
+            @include medium {
                 grid-column: 2;
                 grid-row: 3;
             }
         }
 
         li:nth-of-type(6) {
-            @include large {
+            @include medium {
                 grid-column: 4;
                 grid-row: 3;
             }
         }
 
         li:nth-of-type(7) {
-            @include large {
+            @include medium {
                 grid-column: 6;
                 grid-row: 3;
             }
         }
 
         li:nth-of-type(8) {
-            @include large {
+            @include medium {
                 grid-column: 7;
                 grid-row: 2;
             }
@@ -497,9 +536,9 @@ div.design-selection {
 .preamble[role=article] {
     color: $base-font;
 
-    @include large {
+    @include medium {
         margin-left: 20rem;
-        margin-top: 3rem;
+        margin-top: 20rem;
     }
 }
 
@@ -508,19 +547,21 @@ div.design-selection {
     background-image: url('images/wall-e.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 150px;
+    background-size: 5rem;
     display: block;
     width: 100%;
-    height: 200px;
+    height: 100px;
     content: "";
-    padding-top: 50px;
+    //padding-top: 3rem;
     transform: translatey(0px);
     -webkit-animation: float 1s ease-in-out infinite forwards;
     animation: wall-e 70s linear infinite forwards;
 
-    @include large {
+
+    @include medium {
         position: absolute;
-        left: -15rem;
+        left: -5rem;
+
     }
 }
 
@@ -528,13 +569,14 @@ div.design-selection {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 .explanation {
-    @include large {
+    @include medium {
         margin-right: 20rem;
         margin-top: 5rem;
     }
@@ -544,16 +586,16 @@ div.design-selection {
     background-image: url('images/house.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 150px;
+    background-size: 7rem;
     display: block;
     width: 100%;
-    height: 350px;
+    height: 260px;
     content: "";
     transform: translatey(0px);
     -webkit-animation: float 10s ease-in-out infinite;
     animation: house 10s ease-in-out infinite;
 
-    @include large {
+    @include medium {
         position: absolute;
         right: -18rem;
         top: 1rem;
@@ -587,9 +629,9 @@ div.design-selection {
 }
 
 .participation {
-    @include large {
+    @include medium {
         margin-left: 20rem;
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
 }
 
@@ -597,16 +639,16 @@ div.design-selection {
     background-image: url('images/airplane.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 300px;
+    background-size: 7rem;
     display: block;
     width: 100%;
-    height: 300px;
+    height: 90px;
     content: "";
     transform: translatey(0px);
     -webkit-animation: float 10s ease-in-out infinite;
     animation: airplane 10s ease-in-out infinite;
 
-    @include large {
+    @include medium {
         position: absolute;
         left: -15rem;
         top: 35rem;
@@ -633,14 +675,36 @@ div.design-selection {
 }
 
 .benefits {
+    background: -moz-linear-gradient(left, rgba(233, 223, 196, 1) 0%, rgba(233, 223, 196, 1) 1%, rgba(237, 227, 200, 1) 2%, rgba(237, 227, 200, 1) 24%, rgba(235, 221, 195, 1) 25%, rgba(233, 223, 196, 1) 48%, rgba(235, 221, 195, 1) 49%, rgba(230, 216, 189, 1) 52%, rgba(230, 216, 189, 1) 53%, rgba(233, 219, 192, 1) 54%, rgba(230, 216, 189, 1) 55%, rgba(230, 216, 189, 1) 56%, rgba(233, 219, 192, 1) 57%, rgba(230, 216, 189, 1) 58%, rgba(230, 216, 189, 1) 73%, rgba(233, 219, 192, 1) 74%, rgba(233, 219, 192, 1) 98%, rgba(235, 221, 195, 1) 100%);
 
-    h3,
-    p {
-        background-color: #FEE300;
-        padding: .25rem 1rem 1rem 1rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(233, 223, 196, 1)), color-stop(1%, rgba(233, 223, 196, 1)), color-stop(2%, rgba(237, 227, 200, 1)), color-stop(24%, rgba(237, 227, 200, 1)), color-stop(25%, rgba(235, 221, 195, 1)), color-stop(48%, rgba(233, 223, 196, 1)), color-stop(49%, rgba(235, 221, 195, 1)), color-stop(52%, rgba(230, 216, 189, 1)), color-stop(53%, rgba(230, 216, 189, 1)), color-stop(54%, rgba(233, 219, 192, 1)), color-stop(55%, rgba(230, 216, 189, 1)), color-stop(56%, rgba(230, 216, 189, 1)), color-stop(57%, rgba(233, 219, 192, 1)), color-stop(58%, rgba(230, 216, 189, 1)), color-stop(73%, rgba(230, 216, 189, 1)), color-stop(74%, rgba(233, 219, 192, 1)), color-stop(98%, rgba(233, 219, 192, 1)), color-stop(100%, rgba(235, 221, 195, 1)));
+
+    background: -webkit-linear-gradient(left, rgba(233, 223, 196, 1) 0%, rgba(233, 223, 196, 1) 1%, rgba(237, 227, 200, 1) 2%, rgba(237, 227, 200, 1) 24%, rgba(235, 221, 195, 1) 25%, rgba(233, 223, 196, 1) 48%, rgba(235, 221, 195, 1) 49%, rgba(230, 216, 189, 1) 52%, rgba(230, 216, 189, 1) 53%, rgba(233, 219, 192, 1) 54%, rgba(230, 216, 189, 1) 55%, rgba(230, 216, 189, 1) 56%, rgba(233, 219, 192, 1) 57%, rgba(230, 216, 189, 1) 58%, rgba(230, 216, 189, 1) 73%, rgba(233, 219, 192, 1) 74%, rgba(233, 219, 192, 1) 98%, rgba(235, 221, 195, 1) 100%);
+
+    background: -o-linear-gradient(left, rgba(233, 223, 196, 1) 0%, rgba(233, 223, 196, 1) 1%, rgba(237, 227, 200, 1) 2%, rgba(237, 227, 200, 1) 24%, rgba(235, 221, 195, 1) 25%, rgba(233, 223, 196, 1) 48%, rgba(235, 221, 195, 1) 49%, rgba(230, 216, 189, 1) 52%, rgba(230, 216, 189, 1) 53%, rgba(233, 219, 192, 1) 54%, rgba(230, 216, 189, 1) 55%, rgba(230, 216, 189, 1) 56%, rgba(233, 219, 192, 1) 57%, rgba(230, 216, 189, 1) 58%, rgba(230, 216, 189, 1) 73%, rgba(233, 219, 192, 1) 74%, rgba(233, 219, 192, 1) 98%, rgba(235, 221, 195, 1) 100%);
+
+    background: -ms-linear-gradient(left, rgba(233, 223, 196, 1) 0%, rgba(233, 223, 196, 1) 1%, rgba(237, 227, 200, 1) 2%, rgba(237, 227, 200, 1) 24%, rgba(235, 221, 195, 1) 25%, rgba(233, 223, 196, 1) 48%, rgba(235, 221, 195, 1) 49%, rgba(230, 216, 189, 1) 52%, rgba(230, 216, 189, 1) 53%, rgba(233, 219, 192, 1) 54%, rgba(230, 216, 189, 1) 55%, rgba(230, 216, 189, 1) 56%, rgba(233, 219, 192, 1) 57%, rgba(230, 216, 189, 1) 58%, rgba(230, 216, 189, 1) 73%, rgba(233, 219, 192, 1) 74%, rgba(233, 219, 192, 1) 98%, rgba(235, 221, 195, 1) 100%);
+
+    background: linear-gradient(left, rgba(233, 223, 196, 1) 0%, rgba(233, 223, 196, 1) 1%, rgba(237, 227, 200, 1) 2%, rgba(237, 227, 200, 1) 24%, rgba(235, 221, 195, 1) 25%, rgba(233, 223, 196, 1) 48%, rgba(235, 221, 195, 1) 49%, rgba(230, 216, 189, 1) 52%, rgba(230, 216, 189, 1) 53%, rgba(233, 219, 192, 1) 54%, rgba(230, 216, 189, 1) 55%, rgba(230, 216, 189, 1) 56%, rgba(233, 219, 192, 1) 57%, rgba(230, 216, 189, 1) 58%, rgba(230, 216, 189, 1) 73%, rgba(233, 219, 192, 1) 74%, rgba(233, 219, 192, 1) 98%, rgba(235, 221, 195, 1) 100%);
+
+    background-size: 100%;
+    background-repeat: repeat;
+    border: .5em solid #A37C4D;
+
+    h3 {
+        margin-bottom: .6rem;
     }
 
-    @include large {
+    p {
+        font-size: .8rem;
+        padding: 0 1.2rem 1.5rem 1.2rem;
+
+        @include medium {
+            font-size: .9rem;
+        }
+    }
+
+    @include medium {
         margin-right: 20rem;
         margin-top: 5rem;
     }
@@ -650,15 +714,15 @@ div.design-selection {
     background-image: url('images/rat.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200px;
+    background-size: 7rem;
     display: block;
     width: 100%;
-    height: 300px;
+    height: 90px;
     content: "";
     -webkit-animation: float 2s ease-in-out infinite;
     animation: rat 2s ease-in-out infinite;
 
-    @include large {
+    @include medium {
         position: absolute;
         right: -18rem;
         top: 63rem;
@@ -695,81 +759,169 @@ div.design-selection {
     }
 }
 
-    .requirements {
-        color: $secondary-color;
+.requirements {
+    color: $secondary-color;
 
-        @include large {
-            margin-left: 20rem;
-            margin-bottom: 1rem;
-        }
+    @include medium {
+        margin-left: 20rem;
+        margin-bottom: 1rem;
     }
 
-    .requirements::before {
-        background-image: url('images/ant.svg');
+    & p[role=contentinfo] {
+        display: none;
+    }
+}
+
+.requirements::before {
+    background-image: url('images/ant.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7rem;
+    display: block;
+    width: 100%;
+    height: 100px;
+    content: "";
+    //-webkit-animation: float 10s ease-in-out infinite;
+    //animation: ant 10s ease-in-out infinite;
+
+    @include medium {
+        position: absolute;
+        left: -15rem;
+        bottom: 25rem;
+    }
+}
+
+@keyframes ant {
+    0% {
+        transform: translatey(-200px);
+    }
+
+    50% {
+        transform: translatey(100px);
+    }
+
+
+    100% {
+        transform: translatey(-200px);
+    }
+}
+
+//Resources
+div.zen-resources ul {
+    position: absolute;
+    top: 234rem;
+    color: white;
+    width: 100%;
+    //display: none;
+
+    height: 20rem;
+
+
+    li {
+        padding: 1rem;
+        width: 100%;
+        border: 1px solid $secondary-color;
+        list-style: none;
+        text-align: left;
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+}
+
+//Footer
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 169rem;
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: $base-color;
+    }
+
+    a:nth-of-type(1)::before {
+        background-image: url('images/footer/html.ico');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 300px;
+        background-size: 50px;
         display: block;
-        width: 100%;
-        height: 300px;
+        width: 50px;
+        height: 50px;
         content: "";
-        -webkit-animation: float 10s ease-in-out infinite;
-    animation: ant 10s ease-in-out infinite;
-
-        @include large {
-            position: absolute;
-            left: -15rem;
-            bottom: 25rem;
-        }
     }
 
-    @keyframes ant {
-        0% {
-            transform: translatey(-200px);
-        }
-    
-        50% {
-            transform: translatey(100px);
-        }
-    
-          
-        100% {
-            transform: translatey(-200px);
-        }
+    a:nth-of-type(2)::before {
+        background-image: url('images/footer/css.ico');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        content: "";
     }
 
-    //Resources
-    div.zen-resources ul {
-        position: absolute;
-        bottom: 0rem;
-        color: white;
-        width: 100%;
-        //display: none;
-        margin-top: 60rem;
-
-        li {
-            padding: .5rem;
-            width: 100%;
-            border: 1px solid $secondary-color;
-            list-style: none;
-            text-align: center;
-
-            a:link,
-            a:visited {
-                text-decoration: none;
-                color: $secondary-color;
-            }
-        }
+    a:nth-of-type(3)::before {
+        background-image: url('images/footer/cc.ico');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        content: "";
     }
 
-    //Footer
-    footer {
+    a:nth-of-type(4)::before {
+        background-image: url('images/footer/ally.ico');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        content: "";
+    }
+
+    a:nth-of-type(5)::before {
+        background-image: url('images/footer/gh.ico');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        content: "";
+    }
+}
+
+//Archives
+div.design-archives nav[role=navigation] {
+    padding-top: 25rem;
+    //bottom: 0;
+
+
+    ul {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding: 2rem 0;
+        justify-content: space-between;
+
+
+        li {
+            list-style: none;
+            border: 1px solid $secondary-color;
+            padding: .5rem;
+        }
 
         a:link,
         a:visited {
@@ -777,94 +929,17 @@ div.design-selection {
             color: $secondary-color;
         }
 
-        a:nth-of-type(1)::before {
-            background-image: url('images/footer/html.ico');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 50px;
-            display: block;
-            width: 50px;
-            height: 50px;
-            content: "";
+
+        .viewall::after {
+            content: "\203A";
+            color: $secondary-color;
         }
 
-        a:nth-of-type(2)::before {
-            background-image: url('images/footer/css.ico');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 50px;
-            display: block;
-            width: 50px;
-            height: 50px;
-            content: "";
-        }
-
-        a:nth-of-type(3)::before {
-            background-image: url('images/footer/cc.ico');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 50px;
-            display: block;
-            width: 50px;
-            height: 50px;
-            content: "";
-        }
-
-        a:nth-of-type(4)::before {
-            background-image: url('images/footer/ally.ico');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 50px;
-            display: block;
-            width: 50px;
-            height: 50px;
-            content: "";
-        }
-
-        a:nth-of-type(5)::before {
-            background-image: url('images/footer/gh.ico');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 50px;
-            display: block;
-            width: 50px;
-            height: 50px;
-            content: "";
-        }
     }
+}
 
-    //Archives
-    div.design-archives nav[role=navigation] {
-
-        ul {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: space-between;
-
-            li {
-                list-style: none;
-                border: 1px solid $secondary-color;
-                padding: .5rem;
-            }
-
-            a:link,
-            a:visited {
-                text-decoration: none;
-                color: $secondary-color;
-            }
-
-
-            .viewall::after {
-                content: "\203A";
-                color: $secondary-color;
-            }
-
-        }
-    }
-
-    .archives,
-    .resources,
-    .banner h1 {
-        display: none;
-    }
+.archives,
+.resources,
+.banner h1 {
+    display: none;
+}
