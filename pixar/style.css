@@ -123,7 +123,11 @@ div.page-wrapper .requirements {
 }
 div.page-wrapper p {
   margin-bottom: 0.5rem;
-  text-align: left;
+}
+@media (min-width: 37.5em) {
+  div.page-wrapper p {
+    text-align: left;
+  }
 }
 div.page-wrapper h3 {
   font-size: 1.4rem;
@@ -557,6 +561,14 @@ div.design-selection ul li:nth-of-type(8):hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.explanation {
+  color: #0D0D0D;
+}
+@media (min-width: 27.438em) {
+  .explanation p {
+    text-align: center;
   }
 }
 @media (min-width: 37.5em) {

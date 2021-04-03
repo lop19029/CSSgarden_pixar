@@ -196,7 +196,10 @@ div.page-wrapper {
     //Bottom margins for each p
     p {
         margin-bottom: .5rem;
-        text-align: left;
+        @include medium {
+            text-align: left;
+        }
+        
     }
 
     //all subtitles
@@ -624,7 +627,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 .preamble[role=article] {
     color: $base-color;
     p {
-        @include small-min-27{
+        @include small-min-27 {
             text-align: center;
         }
     }
@@ -676,6 +679,12 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 
 .explanation {
+    color: $base-color;
+    p{
+        @include small-min-27 {
+            text-align: center;
+        }
+    }
     @include medium {
         margin-right: 20rem;
         margin-top: 5rem;
