@@ -622,7 +622,15 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 
 .preamble[role=article] {
-    color: $base-font;
+    color: $base-color;
+    p {
+        @include small-min-27{
+            text-align: center;
+        }
+    }
+    @include small-min-27 {
+        margin-top: -5%;
+    }
 
     @include medium {
         margin-left: 20rem;
