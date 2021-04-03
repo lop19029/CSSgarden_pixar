@@ -632,7 +632,7 @@ div.design-selection ul li:nth-of-type(8):hover {
         }
     }
     @include small-min-27 {
-        margin-top: -5%;
+        margin-top: 10vh;
     }
 
     @include medium {
@@ -680,6 +680,9 @@ div.design-selection ul li:nth-of-type(8):hover {
 
 .explanation {
     color: $base-color;
+    @include small-min-27 {
+        margin-top: 40vh;
+    }
     p{
         @include small-min-27 {
             text-align: center;
@@ -745,7 +748,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 
 .participation {
     @include small-min-27 {
-        margin-top: 15%;
+        margin-top: 50vh;
     }
     @include medium {
         margin-left: 20rem;
@@ -806,7 +809,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     background-position: bottom;
     background-size: 90%;
     @include small-min-27{
-        margin-top: 25%;
+        margin-top: 90vh;
     }
 
     p {
@@ -874,6 +877,10 @@ div.design-selection ul li:nth-of-type(8):hover {
 
 .requirements {
     color: $secondary-color;
+    @include small-min-27 {
+        margin-top: 90vh;
+    }
+    
 
     @include medium {
         margin-left: 20rem;
@@ -889,10 +896,10 @@ div.design-selection ul li:nth-of-type(8):hover {
     background-image: url('images/ant.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 7rem;
+    background-size: contain;
     display: block;
     width: 100%;
-    height: 100px;
+    height: 50vh;
     content: "";
     -webkit-animation: ant 8s ease-in-out infinite;
     animation: ant 8s ease-in-out infinite;

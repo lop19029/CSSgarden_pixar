@@ -517,7 +517,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 @media (min-width: 27.438em) {
   .preamble[role=article] {
-    margin-top: -5%;
+    margin-top: 10vh;
   }
 }
 @media (min-width: 37.5em) {
@@ -565,6 +565,11 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 .explanation {
   color: #0D0D0D;
+}
+@media (min-width: 27.438em) {
+  .explanation {
+    margin-top: 40vh;
+  }
 }
 @media (min-width: 27.438em) {
   .explanation p {
@@ -628,7 +633,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 @media (min-width: 27.438em) {
   .participation {
-    margin-top: 15%;
+    margin-top: 50vh;
   }
 }
 @media (min-width: 37.5em) {
@@ -690,7 +695,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 @media (min-width: 27.438em) {
   .benefits {
-    margin-top: 25%;
+    margin-top: 90vh;
   }
 }
 .benefits p {
@@ -753,6 +758,11 @@ div.design-selection ul li:nth-of-type(8):hover {
 .requirements {
   color: #FDFDFE;
 }
+@media (min-width: 27.438em) {
+  .requirements {
+    margin-top: 90vh;
+  }
+}
 @media (min-width: 37.5em) {
   .requirements {
     margin-left: 20rem;
@@ -767,10 +777,10 @@ div.design-selection ul li:nth-of-type(8):hover {
   background-image: url("images/ant.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 7rem;
+  background-size: contain;
   display: block;
   width: 100%;
-  height: 100px;
+  height: 50vh;
   content: "";
   -webkit-animation: ant 8s ease-in-out infinite;
   animation: ant 8s ease-in-out infinite;
