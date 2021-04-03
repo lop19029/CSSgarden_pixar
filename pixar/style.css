@@ -16,6 +16,7 @@ body {
 }
 
 #css-zen-garden {
+  background-color: #613A22;
   background-image: url("images/background/background_small.png");
   background-position: center;
   background-repeat: no-repeat;
