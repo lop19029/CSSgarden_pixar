@@ -16,7 +16,6 @@ body {
 }
 
 #css-zen-garden {
-  background-color: #613A22;
   background-image: url("images/background/background_small.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -30,6 +29,14 @@ body {
   }
 }
 
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1962px, 0, 0);
+  }
+}
 div.page-wrapper {
   position: relative;
   margin: 20px;
@@ -63,11 +70,11 @@ div.page-wrapper .intro header[role=banner] h1 {
 div.page-wrapper .intro header[role=banner] h2 {
   margin-top: -25rem;
   font-size: 1.2rem;
-  opacity: 0.7;
+  opacity: 0.6;
 }
-@media (min-width: 30em) {
+@media (min-width: 27.438em) {
   div.page-wrapper .intro header[role=banner] h2 {
-    margin-top: -34rem;
+    margin-top: -22rem;
   }
 }
 @media (min-width: 37.5em) {
@@ -79,6 +86,7 @@ div.page-wrapper .intro .summary[role=article] p:nth-of-type(1) {
   margin: 3rem 0 35rem 0;
   text-align: center;
   color: #FDFDFE;
+  opacity: 0.4;
 }
 @media (min-width: 27.438em) {
   div.page-wrapper .intro .summary[role=article] p:nth-of-type(1) {
@@ -94,7 +102,7 @@ div.page-wrapper .preamble,
 div.page-wrapper .main,
 div.page-wrapper .zen-resources,
 div.page-wrapper .design-archives {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 @media (min-width: 37.5em) {
   div.page-wrapper .summary,
@@ -117,11 +125,14 @@ div.page-wrapper p {
   margin-bottom: 0.5rem;
   text-align: left;
 }
+div.page-wrapper h3 {
+  font-size: 1.4rem;
+}
 
 div.design-selection {
   color: #FDFDFE;
   position: absolute;
-  top: 20rem;
+  top: 22rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -225,6 +236,12 @@ div.design-selection ul li:nth-of-type(4)::before {
   width: 80px;
   height: 100px;
   content: "";
+  transform: translatey(0px);
+  /*pasted by Hans*/
+  -webkit-animation: float 20s linear infinite forwards;
+  /*pasted by Hans*/
+  animation: float5 20s linear infinite forwards;
+  /*pasted by Hans*/
 }
 div.design-selection ul li:nth-of-type(5)::before {
   background-image: url("images/space icons/svg/012-jupiter.svg");
@@ -235,6 +252,12 @@ div.design-selection ul li:nth-of-type(5)::before {
   width: 80px;
   height: 100px;
   content: "";
+  transform: translatey(0px);
+  /*pasted by Hans*/
+  -webkit-animation: float 20s linear infinite forwards;
+  /*pasted by Hans*/
+  animation: float4 15s linear infinite forwards;
+  /*pasted by Hans*/
 }
 div.design-selection ul li:nth-of-type(6)::before {
   background-image: url("images/space icons/svg/028-saturn.svg");
@@ -245,6 +268,12 @@ div.design-selection ul li:nth-of-type(6)::before {
   width: 80px;
   height: 100px;
   content: "";
+  transform: translatey(0px);
+  /*pasted by Hans*/
+  -webkit-animation: float 20s linear infinite forwards;
+  /*pasted by Hans*/
+  animation: float3 20s linear infinite forwards;
+  /*pasted by Hans*/
 }
 div.design-selection ul li:nth-of-type(7)::before {
   background-image: url("images/space icons/svg/035-uranus.svg");
@@ -255,6 +284,12 @@ div.design-selection ul li:nth-of-type(7)::before {
   width: 80px;
   height: 100px;
   content: "";
+  transform: translatey(0px);
+  /*pasted by Hans*/
+  -webkit-animation: float 20s linear infinite forwards;
+  /*pasted by Hans*/
+  animation: float3 20s linear infinite forwards;
+  /*pasted by Hans*/
 }
 div.design-selection ul li:nth-of-type(8)::before {
   background-image: url("images/space icons/svg/022-neptune.svg");
@@ -265,6 +300,12 @@ div.design-selection ul li:nth-of-type(8)::before {
   width: 80px;
   height: 100px;
   content: "";
+  transform: translatey(0px);
+  /*pasted by Hans*/
+  -webkit-animation: float 20s linear infinite forwards;
+  /*pasted by Hans*/
+  animation: float4 15s linear infinite forwards;
+  /*pasted by Hans*/
 }
 @media (min-width: 37.5em) {
   div.design-selection ul li:nth-of-type(1) {
@@ -315,6 +356,94 @@ div.design-selection ul li:nth-of-type(8)::before {
   }
 }
 
+div.design-selection ul li:nth-of-type(1):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(1):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(2):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(2):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(3):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(3):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(4):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(4):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(5):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(5):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(6):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(6):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(7):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(7):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+div.design-selection ul li:nth-of-type(8):hover {
+  animation-play-state: paused;
+}
+@media (min-width: 37.5em) {
+  div.design-selection ul li:nth-of-type(8):hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
 @keyframes float1 {
   0% {
     transform: translatey(0px);
@@ -348,6 +477,28 @@ div.design-selection ul li:nth-of-type(8)::before {
     transform: translatey(0px);
   }
 }
+@keyframes float4 {
+  0% {
+    transform: translatey(0px);
+  }
+  40% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes float5 {
+  0% {
+    transform: translatey(0px);
+  }
+  40% {
+    transform: translatey(20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 .main {
   position: relative;
 }
@@ -371,6 +522,7 @@ div.design-selection ul li:nth-of-type(8)::before {
   width: 100%;
   height: 100px;
   content: "";
+  padding-bottom: 5rem;
   transform: translatey(0px);
   -webkit-animation: float 1s ease-in-out infinite forwards;
   animation: wall-e 70s linear infinite forwards;
@@ -378,7 +530,14 @@ div.design-selection ul li:nth-of-type(8)::before {
 @media (min-width: 37.5em) {
   .preamble::before {
     position: absolute;
-    left: -5rem;
+    left: -10rem;
+    top: 80rem;
+  }
+}
+@media (min-width: 75em) {
+  .preamble::before {
+    left: -25rem;
+    top: 70rem;
   }
 }
 
@@ -404,8 +563,9 @@ div.design-selection ul li:nth-of-type(8)::before {
   background-size: 7rem;
   display: block;
   width: 100%;
-  height: 260px;
+  height: 250px;
   content: "";
+  padding-bottom: 5rem;
   transform: translatey(0px);
   -webkit-animation: float 10s ease-in-out infinite;
   animation: house 10s ease-in-out infinite;
@@ -413,8 +573,14 @@ div.design-selection ul li:nth-of-type(8)::before {
 @media (min-width: 37.5em) {
   .explanation::before {
     position: absolute;
-    right: -18rem;
-    top: 1rem;
+    right: -10rem;
+    top: 8rem;
+  }
+}
+@media (min-width: 75em) {
+  .explanation::before {
+    right: -25rem;
+    top: 0rem;
   }
 }
 
@@ -452,8 +618,9 @@ div.design-selection ul li:nth-of-type(8)::before {
   background-size: 7rem;
   display: block;
   width: 100%;
-  height: 90px;
+  height: 60px;
   content: "";
+  padding-bottom: 5rem;
   transform: translatey(0px);
   -webkit-animation: float 10s ease-in-out infinite;
   animation: airplane 10s ease-in-out infinite;
@@ -461,8 +628,14 @@ div.design-selection ul li:nth-of-type(8)::before {
 @media (min-width: 37.5em) {
   .participation::before {
     position: absolute;
-    left: -15rem;
-    top: 35rem;
+    left: -10rem;
+    top: 63rem;
+  }
+}
+@media (min-width: 75em) {
+  .participation::before {
+    left: -25rem;
+    top: 25rem;
   }
 }
 
@@ -492,12 +665,8 @@ div.design-selection ul li:nth-of-type(8)::before {
   background-repeat: repeat;
   border: 0.5em solid #A37C4D;
 }
-.benefits h3 {
-  margin-bottom: 0.6rem;
-}
 .benefits p {
-  font-size: 0.8rem;
-  padding: 0 1.2rem 1.5rem 1.2rem;
+  padding: 0 2.5rem 2rem 2.5rem;
 }
 @media (min-width: 37.5em) {
   .benefits p {
@@ -508,6 +677,7 @@ div.design-selection ul li:nth-of-type(8)::before {
   .benefits {
     margin-right: 20rem;
     margin-top: 5rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -520,38 +690,36 @@ div.design-selection ul li:nth-of-type(8)::before {
   width: 100%;
   height: 90px;
   content: "";
-  -webkit-animation: float 2s ease-in-out infinite;
-  animation: rat 2s ease-in-out infinite;
+  padding-bottom: 5rem;
+  -webkit-animation: move 8s infinite;
+  -webkit-animation: rat 2s ease-in-out infinite;
+  animation: rat 10s ease-in-out infinite;
+  /*added by Hans*/
 }
 @media (min-width: 37.5em) {
   .benefits::before {
     position: absolute;
-    right: -18rem;
-    top: 63rem;
+    right: -3rem;
+    top: 100rem;
+  }
+}
+@media (min-width: 75em) {
+  .benefits::before {
+    right: -10rem;
+    top: 48rem;
   }
 }
 
 @keyframes rat {
   0% {
-    transform: translatey(0px) scale(1.25, 0.75);
-  }
-  50% {
-    transform: translatey(10px) scale(1, 1);
+    transform: translatex(-100px);
   }
   55% {
-    transform: translatey(5px) rotate(15deg);
-  }
-  60% {
-    transform: rotate(-15deg);
-  }
-  65% {
-    transform: rotate(15deg);
-  }
-  70% {
-    transform: rotate(-15deg);
+    transform: translatex(40%);
   }
   100% {
-    transform: translatey(0) scale(1.25, 0.75);
+    transform: translatex(-100px);
+    transform: rotate(-35deg);
   }
 }
 .requirements {
@@ -576,32 +744,53 @@ div.design-selection ul li:nth-of-type(8)::before {
   width: 100%;
   height: 100px;
   content: "";
+  -webkit-animation: ant 8s ease-in-out infinite;
+  animation: ant 8s ease-in-out infinite;
 }
 @media (min-width: 37.5em) {
   .requirements::before {
     position: absolute;
-    left: -15rem;
-    bottom: 25rem;
+    left: -10rem;
+    bottom: 31rem;
+  }
+}
+@media (min-width: 75em) {
+  .requirements::before {
+    left: -25rem;
+    bottom: 10rem;
   }
 }
 
 @keyframes ant {
   0% {
-    transform: translatey(-200px);
+    transform: scale(1);
   }
   50% {
-    transform: translatey(100px);
+    transform: scale(1.1);
   }
   100% {
-    transform: translatey(-200px);
+    transform: scale(1);
   }
 }
 div.zen-resources ul {
   position: absolute;
-  top: 234rem;
+  bottom: 9rem;
   color: white;
   width: 100%;
-  height: 20rem;
+  height: 13rem;
+}
+@media (min-width: 37.5em) {
+  div.zen-resources ul {
+    display: flex;
+    flex: row nowrap;
+    height: fit-content;
+    justify-content: center;
+  }
+}
+@media (min-width: 37.5em) and (min-width: 75em) {
+  div.zen-resources ul {
+    bottom: 6rem;
+  }
 }
 div.zen-resources ul li {
   padding: 1rem;
@@ -609,6 +798,11 @@ div.zen-resources ul li {
   border: 1px solid #FDFDFE;
   list-style: none;
   text-align: left;
+}
+@media (min-width: 37.5em) {
+  div.zen-resources ul li {
+    text-align: center;
+  }
 }
 div.zen-resources ul li a:link,
 div.zen-resources ul li a:visited {
@@ -621,9 +815,15 @@ footer {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   position: absolute;
-  top: 169rem;
+  left: 5%;
+  right: 5%;
+}
+@media (min-width: 75em) {
+  footer {
+    margin-top: 2rem;
+  }
 }
 footer a:link,
 footer a:visited {
@@ -682,7 +882,12 @@ footer a:nth-of-type(5)::before {
 }
 
 div.design-archives nav[role=navigation] {
-  padding-top: 25rem;
+  padding-top: 26rem;
+}
+@media (min-width: 75em) {
+  div.design-archives nav[role=navigation] {
+    padding-top: 15rem;
+  }
 }
 div.design-archives nav[role=navigation] ul {
   display: flex;
