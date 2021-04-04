@@ -17,7 +17,7 @@ $accent3: #047542;
 $break-small: 20em; //320px
 $break-small-21: 21.188em; //339px
 $break-small-27: 27.438em; //439px /
-$break-medium: 37.500em; //600px /
+$break-medium: 700px; //600px /
 $break-large: 75em; //1200px
 
 //Mixins
@@ -69,6 +69,8 @@ body {
     font-family: $base-font;
     @include center;
     max-height: 100%;
+    margin: auto 0;
+    
 }
 
 //Background
@@ -100,6 +102,10 @@ div.page-wrapper {
     position: relative;
     margin: 20px;
     text-align: center;
+    max-width: 90vw;
+    margin: auto;
+    
+
 
     .intro {
         text-align: center;
@@ -1099,8 +1105,22 @@ div.design-archives nav[role=navigation] {
     }
 }
 
+
+//Temporary fix centralizing issues
+
+@media (max-width:1000px) and (min-width:650px) {
+    div.page-wrapper {
+        margin-left: 20vw;
+    }
+}​
+
 .archives,
 .resources,
 .banner h1 {
     display: none;
 }
+
+.archives {
+    display: none;
+}
+

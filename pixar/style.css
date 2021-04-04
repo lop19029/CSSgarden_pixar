@@ -13,6 +13,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   max-height: 100%;
+  margin: auto 0;
 }
 
 #css-zen-garden {
@@ -23,7 +24,7 @@ body {
   margin-top: 0;
   padding: 0;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   #css-zen-garden {
     background-image: url("images/background/background_big.png");
   }
@@ -41,6 +42,8 @@ div.page-wrapper {
   position: relative;
   margin: 20px;
   text-align: center;
+  max-width: 90vw;
+  margin: auto;
 }
 div.page-wrapper .intro {
   text-align: center;
@@ -60,7 +63,7 @@ div.page-wrapper .intro header[role=banner] h1 {
   white-space: nowrap;
   overflow: hidden;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.page-wrapper .intro header[role=banner] h1 {
     max-width: 700px;
     height: 740px;
@@ -77,7 +80,7 @@ div.page-wrapper .intro header[role=banner] h2 {
     margin-top: -22rem;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.page-wrapper .intro header[role=banner] h2 {
     margin-top: -31rem;
   }
@@ -104,7 +107,7 @@ div.page-wrapper .zen-resources,
 div.page-wrapper .design-archives {
   font-size: 0.9rem;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.page-wrapper .summary,
 div.page-wrapper .preamble,
 div.page-wrapper .main,
@@ -124,7 +127,7 @@ div.page-wrapper .requirements {
 div.page-wrapper p {
   margin-bottom: 0.5rem;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.page-wrapper p {
     text-align: left;
   }
@@ -141,7 +144,7 @@ div.design-selection {
   right: 0;
   margin: auto;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection {
     margin-top: 5em;
   }
@@ -157,7 +160,7 @@ div.design-selection ul {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -311,49 +314,49 @@ div.design-selection ul li:nth-of-type(8)::before {
   animation: float4 15s linear infinite forwards;
   /*pasted by Hans*/
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(1) {
     grid-column: 1;
     grid-row: 2;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(2) {
     grid-column: 2;
     grid-row: 1;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(3) {
     grid-column: 4;
     grid-row: 1;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(4) {
     grid-column: 6;
     grid-row: 1;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(5) {
     grid-column: 2;
     grid-row: 3;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(6) {
     grid-column: 4;
     grid-row: 3;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(7) {
     grid-column: 6;
     grid-row: 3;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(8) {
     grid-column: 7;
     grid-row: 2;
@@ -363,7 +366,7 @@ div.design-selection ul li:nth-of-type(8)::before {
 div.design-selection ul li:nth-of-type(1):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(1):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -374,7 +377,7 @@ div.design-selection ul li:nth-of-type(1):hover {
 div.design-selection ul li:nth-of-type(2):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(2):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -385,7 +388,7 @@ div.design-selection ul li:nth-of-type(2):hover {
 div.design-selection ul li:nth-of-type(3):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(3):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -396,7 +399,7 @@ div.design-selection ul li:nth-of-type(3):hover {
 div.design-selection ul li:nth-of-type(4):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(4):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -407,7 +410,7 @@ div.design-selection ul li:nth-of-type(4):hover {
 div.design-selection ul li:nth-of-type(5):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(5):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -418,7 +421,7 @@ div.design-selection ul li:nth-of-type(5):hover {
 div.design-selection ul li:nth-of-type(6):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(6):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -429,7 +432,7 @@ div.design-selection ul li:nth-of-type(6):hover {
 div.design-selection ul li:nth-of-type(7):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(7):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -440,7 +443,7 @@ div.design-selection ul li:nth-of-type(7):hover {
 div.design-selection ul li:nth-of-type(8):hover {
   animation-play-state: paused;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(8):hover {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -520,7 +523,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     margin-top: 10vh;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .preamble[role=article] {
     margin-left: 20rem;
     margin-top: 20rem;
@@ -541,7 +544,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   -webkit-animation: float 1s ease-in-out infinite forwards;
   animation: wall-e 70s linear infinite forwards;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .preamble::before {
     position: absolute;
     left: -10rem;
@@ -576,7 +579,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     text-align: center;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .explanation {
     margin-right: 20rem;
     margin-top: 5rem;
@@ -597,7 +600,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   -webkit-animation: float 10s ease-in-out infinite;
   animation: house 10s ease-in-out infinite;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .explanation::before {
     position: absolute;
     right: -10rem;
@@ -636,7 +639,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     margin-top: 50vh;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .participation {
     margin-left: 20rem;
     margin-top: 6rem;
@@ -657,7 +660,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   -webkit-animation: float 10s ease-in-out infinite;
   animation: airplane 10s ease-in-out infinite;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .participation::before {
     position: absolute;
     left: -10rem;
@@ -701,12 +704,12 @@ div.design-selection ul li:nth-of-type(8):hover {
 .benefits p {
   padding: 0 2.5rem 2rem 2.5rem;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .benefits p {
     font-size: 0.9rem;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .benefits {
     margin-right: 20rem;
     margin-top: 5rem;
@@ -729,7 +732,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   animation: rat 10s ease-in-out infinite;
   /*added by Hans*/
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .benefits::before {
     position: absolute;
     right: -3rem;
@@ -763,7 +766,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     margin-top: 90vh;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .requirements {
     margin-left: 20rem;
     margin-bottom: 1rem;
@@ -785,7 +788,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   -webkit-animation: ant 8s ease-in-out infinite;
   animation: ant 8s ease-in-out infinite;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   .requirements::before {
     position: absolute;
     left: -10rem;
@@ -817,7 +820,7 @@ div.zen-resources ul {
   width: 100%;
   height: 13rem;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.zen-resources ul {
     display: flex;
     flex: row nowrap;
@@ -825,7 +828,7 @@ div.zen-resources ul {
     justify-content: center;
   }
 }
-@media (min-width: 37.5em) and (min-width: 75em) {
+@media (min-width: 700px) and (min-width: 75em) {
   div.zen-resources ul {
     bottom: 6rem;
   }
@@ -837,7 +840,7 @@ div.zen-resources ul li {
   list-style: none;
   text-align: left;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 700px) {
   div.zen-resources ul li {
     text-align: center;
   }
@@ -948,9 +951,18 @@ div.design-archives nav[role=navigation] ul .viewall::after {
   color: #FDFDFE;
 }
 
-.archives,
+@media (max-width: 1000px) and (min-width: 650px) {
+  div.page-wrapper {
+    margin-left: 20vw;
+  }
+}
+​ .archives,
 .resources,
 .banner h1 {
+  display: none;
+}
+
+.archives {
   display: none;
 }
 
