@@ -176,6 +176,9 @@ div.page-wrapper {
                 @include medium {
                     margin-top: -70vh;
                 }
+                @include large {
+                    margin-top: -40vh;
+                }
             }
         }
     }
@@ -680,6 +683,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     @include large {
         left: -25rem;
         top: 70rem; 
+        margin-top: 140vh;
+        margin-left: 0;
     }
 }
 
@@ -738,6 +743,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     @include large {
         right: -25rem;
         top: 0rem;
+        margin-right: 0vw;
+        
     }
 }
 
@@ -811,6 +818,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     @include large {
         left: -25rem;
         top: 25rem;
+        margin-top: 30vh;
+        margin-left: 0vw;
     }
 }
 
@@ -837,10 +846,11 @@ div.design-selection ul li:nth-of-type(8):hover {
     color: white;
     background-image: url("images/road_sign.png");
     background-repeat: no-repeat;
-    background-position: top;
+    
     background-size: 100%;
     @include small-min-27{
         margin-top: 90vh;
+        background-position: bottom;
     }
 
     p {
@@ -854,6 +864,10 @@ div.design-selection ul li:nth-of-type(8):hover {
         margin-right: 20rem;
         margin-top: 230vh;
         padding-top: 2.5rem;
+        background-position: top;
+    }
+    @include large {
+        margin-top: 100vh;
     }
 }
 
@@ -883,6 +897,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     @include large {
         right: -10rem;
         top: 48rem;
+        margin-top: 200vh;
     }
 }
 
@@ -911,15 +926,27 @@ div.design-selection ul li:nth-of-type(8):hover {
     color: $secondary-color;
     @include small-min-27 {
         margin-top: 90vh;
+        text-align: center;
     }
-    
 
     @include medium {
         margin-left: 20rem;
         margin-bottom: 1rem;
         margin-top: 150vh;
+        text-align: end;
     }
 
+    @include large {
+        margin-top: 150vh;
+    }
+    p{
+        @include small-min-27 {
+            text-align: center;
+        }
+        @include medium {
+            text-align: end;
+        }
+    }
     & p[role=contentinfo] {
         display: none;
     }
@@ -947,6 +974,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     @include large {
         left: -25rem;
         bottom: 10rem;
+        margin-left: 0vw;
     }
 }
 
