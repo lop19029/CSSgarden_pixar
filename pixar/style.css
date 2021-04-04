@@ -68,6 +68,7 @@ div.page-wrapper .intro header[role=banner] h1 {
     max-width: 700px;
     height: 740px;
     margin: 0 auto;
+    margin-top: 10vh;
   }
 }
 div.page-wrapper .intro header[role=banner] h2 {
@@ -82,7 +83,7 @@ div.page-wrapper .intro header[role=banner] h2 {
 }
 @media (min-width: 700px) {
   div.page-wrapper .intro header[role=banner] h2 {
-    margin-top: -31rem;
+    margin-top: -25rem;
   }
 }
 div.page-wrapper .intro .summary[role=article] p:nth-of-type(1) {
@@ -99,6 +100,11 @@ div.page-wrapper .intro .summary[role=article] p:nth-of-type(1) {
 div.page-wrapper .intro .summary[role=article] p:nth-of-type(2) {
   text-align: center;
   margin-bottom: 3rem;
+}
+@media (min-width: 700px) {
+  div.page-wrapper .intro .summary[role=article] p:nth-of-type(2) {
+    margin-top: -70vh;
+  }
 }
 div.page-wrapper .summary,
 div.page-wrapper .preamble,
@@ -127,11 +133,6 @@ div.page-wrapper .requirements {
 div.page-wrapper p {
   margin-bottom: 0.5rem;
 }
-@media (min-width: 700px) {
-  div.page-wrapper p {
-    text-align: left;
-  }
-}
 div.page-wrapper h3 {
   font-size: 1.4rem;
 }
@@ -146,7 +147,7 @@ div.design-selection {
 }
 @media (min-width: 700px) {
   div.design-selection {
-    margin-top: 5em;
+    margin-top: 80vh;
   }
 }
 div.design-selection .select {
@@ -518,6 +519,11 @@ div.design-selection ul li:nth-of-type(8):hover {
     text-align: center;
   }
 }
+@media (min-width: 700px) {
+  .preamble[role=article] p {
+    text-align: end;
+  }
+}
 @media (min-width: 27.438em) {
   .preamble[role=article] {
     margin-top: 10vh;
@@ -526,7 +532,8 @@ div.design-selection ul li:nth-of-type(8):hover {
 @media (min-width: 700px) {
   .preamble[role=article] {
     margin-left: 20rem;
-    margin-top: 20rem;
+    margin-top: 220vh;
+    text-align: end;
   }
 }
 
@@ -549,6 +556,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     position: absolute;
     left: -10rem;
     top: 80rem;
+    margin-top: 50vh;
+    margin-left: -10vw;
   }
 }
 @media (min-width: 75em) {
@@ -580,9 +589,15 @@ div.design-selection ul li:nth-of-type(8):hover {
   }
 }
 @media (min-width: 700px) {
+  .explanation p {
+    text-align: start;
+  }
+}
+@media (min-width: 700px) {
   .explanation {
     margin-right: 20rem;
-    margin-top: 5rem;
+    margin-top: 80vh;
+    text-align: start;
   }
 }
 
@@ -590,7 +605,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   background-image: url("images/house.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 7rem;
+  background-size: contain;
   display: block;
   width: 100%;
   height: 250px;
@@ -605,6 +620,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     position: absolute;
     right: -10rem;
     top: 8rem;
+    margin-top: -10vh;
+    margin-right: -10vw;
   }
 }
 @media (min-width: 75em) {
@@ -634,6 +651,11 @@ div.design-selection ul li:nth-of-type(8):hover {
     transform: translatey(0px);
   }
 }
+@media (min-width: 700px) {
+  .participation p {
+    text-align: end;
+  }
+}
 @media (min-width: 27.438em) {
   .participation {
     margin-top: 50vh;
@@ -642,7 +664,8 @@ div.design-selection ul li:nth-of-type(8):hover {
 @media (min-width: 700px) {
   .participation {
     margin-left: 20rem;
-    margin-top: 6rem;
+    margin-top: 90vh;
+    text-align: end;
   }
 }
 
@@ -650,10 +673,10 @@ div.design-selection ul li:nth-of-type(8):hover {
   background-image: url("images/airplane.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 11rem;
+  background-size: contain;
   display: block;
   width: 100%;
-  height: 60px;
+  height: 15vw;
   content: "";
   padding-bottom: 5rem;
   transform: translatey(0px);
@@ -665,6 +688,8 @@ div.design-selection ul li:nth-of-type(8):hover {
     position: absolute;
     left: -10rem;
     top: 63rem;
+    margin-top: -60vh;
+    margin-left: -10vw;
   }
 }
 @media (min-width: 75em) {
@@ -693,8 +718,8 @@ div.design-selection ul li:nth-of-type(8):hover {
   color: white;
   background-image: url("images/road_sign.png");
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 90%;
+  background-position: top;
+  background-size: 100%;
 }
 @media (min-width: 27.438em) {
   .benefits {
@@ -712,7 +737,7 @@ div.design-selection ul li:nth-of-type(8):hover {
 @media (min-width: 700px) {
   .benefits {
     margin-right: 20rem;
-    margin-top: 5rem;
+    margin-top: 230vh;
     padding-top: 2.5rem;
   }
 }
@@ -737,6 +762,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     position: absolute;
     right: -3rem;
     top: 100rem;
+    margin-top: 240vh;
   }
 }
 @media (min-width: 75em) {
@@ -770,6 +796,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   .requirements {
     margin-left: 20rem;
     margin-bottom: 1rem;
+    margin-top: 150vh;
   }
 }
 .requirements p[role=contentinfo] {
@@ -793,6 +820,7 @@ div.design-selection ul li:nth-of-type(8):hover {
     position: absolute;
     left: -10rem;
     bottom: 31rem;
+    margin-left: -10vw;
   }
 }
 @media (min-width: 75em) {
@@ -951,12 +979,7 @@ div.design-archives nav[role=navigation] ul .viewall::after {
   color: #FDFDFE;
 }
 
-@media (max-width: 1000px) and (min-width: 650px) {
-  div.page-wrapper {
-    margin-left: 20vw;
-  }
-}
-​ .archives,
+.archives,
 .resources,
 .banner h1 {
   display: none;
