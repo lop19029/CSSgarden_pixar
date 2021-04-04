@@ -45,6 +45,12 @@ div.page-wrapper {
   max-width: 90vw;
   margin: auto;
 }
+@media (min-width: 75em) {
+  div.page-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 div.page-wrapper .intro {
   text-align: center;
   position: relative;
@@ -162,7 +168,6 @@ div.design-selection .select {
 div.design-selection ul {
   position: relative;
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -211,7 +216,6 @@ div.design-selection ul li:nth-of-type(1)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 20s linear infinite forwards;
   animation: float1 20s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(2)::before {
@@ -224,7 +228,6 @@ div.design-selection ul li:nth-of-type(2)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 15s linear infinite forwards;
   animation: float2 15s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(3)::before {
@@ -237,7 +240,6 @@ div.design-selection ul li:nth-of-type(3)::before {
   height: 80px;
   content: "";
   transform: translatey(0px);
-  -webkit-animation: float 20s linear infinite forwards;
   animation: float3 20s linear infinite forwards;
 }
 div.design-selection ul li:nth-of-type(4)::before {
@@ -250,8 +252,6 @@ div.design-selection ul li:nth-of-type(4)::before {
   height: 100px;
   content: "";
   transform: translatey(0px);
-  /*pasted by Hans*/
-  -webkit-animation: float 20s linear infinite forwards;
   /*pasted by Hans*/
   animation: float5 20s linear infinite forwards;
   /*pasted by Hans*/
@@ -267,8 +267,6 @@ div.design-selection ul li:nth-of-type(5)::before {
   content: "";
   transform: translatey(0px);
   /*pasted by Hans*/
-  -webkit-animation: float 20s linear infinite forwards;
-  /*pasted by Hans*/
   animation: float4 15s linear infinite forwards;
   /*pasted by Hans*/
 }
@@ -282,8 +280,6 @@ div.design-selection ul li:nth-of-type(6)::before {
   height: 100px;
   content: "";
   transform: translatey(0px);
-  /*pasted by Hans*/
-  -webkit-animation: float 20s linear infinite forwards;
   /*pasted by Hans*/
   animation: float3 20s linear infinite forwards;
   /*pasted by Hans*/
@@ -299,8 +295,6 @@ div.design-selection ul li:nth-of-type(7)::before {
   content: "";
   transform: translatey(0px);
   /*pasted by Hans*/
-  -webkit-animation: float 20s linear infinite forwards;
-  /*pasted by Hans*/
   animation: float3 20s linear infinite forwards;
   /*pasted by Hans*/
 }
@@ -314,8 +308,6 @@ div.design-selection ul li:nth-of-type(8)::before {
   height: 100px;
   content: "";
   transform: translatey(0px);
-  /*pasted by Hans*/
-  -webkit-animation: float 20s linear infinite forwards;
   /*pasted by Hans*/
   animation: float4 15s linear infinite forwards;
   /*pasted by Hans*/
@@ -374,9 +366,8 @@ div.design-selection ul li:nth-of-type(1):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(1):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -385,9 +376,8 @@ div.design-selection ul li:nth-of-type(2):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(2):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -396,9 +386,8 @@ div.design-selection ul li:nth-of-type(3):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(3):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -407,9 +396,8 @@ div.design-selection ul li:nth-of-type(4):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(4):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -418,9 +406,8 @@ div.design-selection ul li:nth-of-type(5):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(5):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -429,9 +416,8 @@ div.design-selection ul li:nth-of-type(6):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(6):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -440,9 +426,8 @@ div.design-selection ul li:nth-of-type(7):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(7):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -451,9 +436,8 @@ div.design-selection ul li:nth-of-type(8):hover {
 }
 @media (min-width: 700px) {
   div.design-selection ul li:nth-of-type(8):hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
     transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -553,7 +537,6 @@ div.design-selection ul li:nth-of-type(8):hover {
   content: "";
   padding-bottom: 5rem;
   transform: translatey(0px);
-  -webkit-animation: float 1s ease-in-out infinite forwards;
   animation: wall-e 70s linear infinite forwards;
 }
 @media (min-width: 700px) {
@@ -619,7 +602,6 @@ div.design-selection ul li:nth-of-type(8):hover {
   content: "";
   padding-bottom: 5rem;
   transform: translatey(0px);
-  -webkit-animation: float 10s ease-in-out infinite;
   animation: house 10s ease-in-out infinite;
 }
 @media (min-width: 700px) {
@@ -688,7 +670,6 @@ div.design-selection ul li:nth-of-type(8):hover {
   content: "";
   padding-bottom: 5rem;
   transform: translatey(0px);
-  -webkit-animation: float 10s ease-in-out infinite;
   animation: airplane 10s ease-in-out infinite;
 }
 @media (min-width: 700px) {
@@ -768,9 +749,7 @@ div.design-selection ul li:nth-of-type(8):hover {
   height: 90px;
   content: "";
   padding-bottom: 5rem;
-  -webkit-animation: move 8s infinite;
-  -webkit-animation: rat 2s ease-in-out infinite;
-  animation: rat 10s ease-in-out infinite;
+  animation: rat 15s linear infinite forwards;
   /*added by Hans*/
 }
 @media (min-width: 700px) {
@@ -791,14 +770,19 @@ div.design-selection ul li:nth-of-type(8):hover {
 
 @keyframes rat {
   0% {
-    transform: translatex(-100px);
+    transform: translatex(0);
   }
-  55% {
-    transform: translatex(40%);
+  50% {
+    transform: translatex(30%);
+  }
+  60% {
+    transform: translatex(30%) rotateY(180deg);
+  }
+  90% {
+    transform: translatex(0) rotateY(180deg);
   }
   100% {
-    transform: translatex(-100px);
-    transform: rotate(-35deg);
+    transform: translatex(0) rotateY(0deg);
   }
 }
 .requirements {
@@ -846,7 +830,6 @@ div.design-selection ul li:nth-of-type(8):hover {
   width: 100%;
   height: 50vh;
   content: "";
-  -webkit-animation: ant 8s ease-in-out infinite;
   animation: ant 8s ease-in-out infinite;
 }
 @media (min-width: 700px) {
@@ -886,7 +869,6 @@ div.zen-resources ul {
 @media (min-width: 700px) {
   div.zen-resources ul {
     display: flex;
-    flex: row nowrap;
     height: fit-content;
     justify-content: center;
   }
@@ -916,7 +898,6 @@ div.zen-resources ul li a:visited {
 
 footer {
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -995,7 +976,6 @@ div.design-archives nav[role=navigation] {
 }
 div.design-archives nav[role=navigation] ul {
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
 }
